@@ -7,9 +7,10 @@ import {
   TranslateReady,
 } from '@alcumus/components';
 import clsx from 'clsx';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { BillingFrequency } from '../../../../types/billingFrequency';
 import { alcumusLogoIcon } from '../../../constants/images';
 import calculateYearlySavings from '../../../../lib/utils/calculateYearlySavings';

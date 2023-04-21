@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { useRecoilState } from 'recoil';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import { tableTileViewSwitcherState } from '../shared/ReportViewToggle';
 import SubFolderTableView from './SubFolderTableView';

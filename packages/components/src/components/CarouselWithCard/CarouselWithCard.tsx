@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core';
+import makeStyles from '@mui/styles/makeStyles';
 import { OutlinedIcon, StyleVariables } from '../../index';
 import Card, { CardProps } from './Card';
 

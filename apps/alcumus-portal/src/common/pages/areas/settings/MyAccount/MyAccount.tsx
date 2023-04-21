@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleVariables, Text } from '@alcumus/components';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import KeycloakPasswordUpdateForm from '../../../../components/KeycloakPasswordUpdateForm';
 import AccountDetailsSection from '../../../../components/AccountDetailsSection';
 import UserProfileView from '../../../../components/UserProfileView';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import SettingsPage from '../SettingsPage';
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import AboutSection from '../../../../components/AboutSection';
 import LocaleSection from '../../../../components/LocaleSection';
 

@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { withSkeletonLoading } from '../../hocs/withLoading';
 import { ReportListItemProps } from '../../../domain/reportListItemProps';
 import Tile from './Tile';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import { ReportElementTypes } from '../../../domain/reportElementTypes';
 import FolderTile from '../FoldersPage/FolderTile';

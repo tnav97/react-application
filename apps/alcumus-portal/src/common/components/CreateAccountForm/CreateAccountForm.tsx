@@ -1,10 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
-import { makeStyles, Theme } from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import { Button, FormControl, Grid, TextField, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import { useStateFromInput } from '@alcumus/hooks';
 import validator from 'validator';
@@ -209,9 +206,9 @@ export default function CreateAccountForm({
         <Grid container>
           <Grid item xs={12} sm={6} md={6}>
             <FormControl
+              variant="standard"
               fullWidth
-              className={clsx(classes.formGroup, classes.spaceOnRight)}
-            >
+              className={clsx(classes.formGroup, classes.spaceOnRight)}>
               <TextField
                 fullWidth
                 id="firstName"
@@ -235,9 +232,9 @@ export default function CreateAccountForm({
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
             <FormControl
+              variant="standard"
               fullWidth
-              className={clsx(classes.formGroup, classes.spaceOnLeft)}
-            >
+              className={clsx(classes.formGroup, classes.spaceOnLeft)}>
               <TextField
                 fullWidth
                 id="lastName"
@@ -262,9 +259,9 @@ export default function CreateAccountForm({
           <Grid item xs={12} />
           <Grid item xs={12} sm={6} md={6}>
             <FormControl
+              variant="standard"
               fullWidth
-              className={clsx(classes.formGroup, classes.spaceOnRight)}
-            >
+              className={clsx(classes.formGroup, classes.spaceOnRight)}>
               <TextField
                 fullWidth
                 id="email"
@@ -288,9 +285,9 @@ export default function CreateAccountForm({
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
             <FormControl
+              variant="standard"
               fullWidth
-              className={clsx(classes.formGroup, classes.spaceOnLeft)}
-            >
+              className={clsx(classes.formGroup, classes.spaceOnLeft)}>
               <TextField
                 fullWidth
                 id="username"
@@ -312,7 +309,7 @@ export default function CreateAccountForm({
             </FormControl>
           </Grid>
         </Grid>
-        <FormControl fullWidth className={classes.formGroup}>
+        <FormControl variant="standard" fullWidth className={classes.formGroup}>
           <TextField
             fullWidth
             id="password"
@@ -340,7 +337,7 @@ export default function CreateAccountForm({
             symbols
           </Text>
         </FormControl>
-        <FormControl fullWidth className={classes.formGroup}>
+        <FormControl variant="standard" fullWidth className={classes.formGroup}>
           <TextField
             fullWidth
             label="Confirm password"

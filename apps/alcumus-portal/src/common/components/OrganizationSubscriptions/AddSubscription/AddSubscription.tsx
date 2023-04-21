@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Input, Modal, Select, Text } from '@alcumus/components';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import { Application, MyOrganizationDetails } from '../../../types';
 import { TFunction } from 'i18next';
 import { useStateFromInput } from '@alcumus/hooks';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import { createSubscription } from './createSubscription';
 import { addDays, addYears, formatISO, parseISO } from 'date-fns';
 import useSWR from 'swr';

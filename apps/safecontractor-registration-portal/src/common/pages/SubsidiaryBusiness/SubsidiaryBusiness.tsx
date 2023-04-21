@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Card, FormControl, Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Box, Card, FormControl, Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import {
   Page,
   StyleVariables,
@@ -11,7 +12,7 @@ import {
 import AboutSection from '../../components/AboutSection';
 import FooterSection from '../../components/FooterSection';
 import clsx from 'clsx';
-import { DeleteOutline } from '@material-ui/icons';
+import { DeleteOutline } from '@mui/icons-material';
 import { CardSelected } from '../../constants';
 import MobileFooterSection from '../../components/MobileFooterSection';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginLeft: '24px',
     marginRight: '24px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '14px',
       fontWeight: StyleVariables.fonts.weight.medium,
       fontSize: StyleVariables.fonts.size.h5,
@@ -56,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   formGroup: {
     marginBottom: '1rem',
     textAlign: 'inherit',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: '0rem',
     },
   },
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     justifyContent: 'space-evenly',
     textAlignLast: 'left',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '24px',
     },
   },
@@ -100,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '8px',
     marginRight: '8px',
 
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
       margin: 'auto',
       marginBottom: '8px',
@@ -120,19 +121,19 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 105px)',
     },
   },
   thumbsUp: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   thumbsDown: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -143,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: 0,
       marginLeft: '20px',
@@ -167,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     margin: 'auto',
     marginRight: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginRight: 0,
     },
     borderRadius: '8px',
@@ -195,7 +196,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   inputsContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
     },
   },
@@ -205,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -220,11 +221,11 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '1rem',
     marginLeft: '42px',
     marginRight: '42px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
@@ -235,7 +236,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   desktopDeleteContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -268,7 +269,7 @@ export default function SubsidiaryBusiness() {
   const [nextPage, setNextPage] = React.useState('choosePlan');
   const dispatch = useDispatch();
   const history = useHistory();
-  const subsidiaryListSelector = useSelector((state) => state.subsidiary);
+  const subsidiaryListSelector = useSelector((state: any) => state.subsidiary);
   const initialState = { name: '', registrationNumber: '' };
   const [inputFields, setInputFields] = useState(
     !subsidiaryListSelector.companyList
@@ -613,12 +614,12 @@ export default function SubsidiaryBusiness() {
                     <Grid container className={clsx(classes.inputsContainer)}>
                       <Grid item xs={10} sm={6} md={5} lg={5}>
                         <FormControl
+                          variant="standard"
                           fullWidth
                           className={clsx(
                             classes.formGroup,
                             classes.businessAdd
-                          )}
-                        >
+                          )}>
                           <Input
                             placeholder={placeholderName ? 'Company name' : ''}
                             className={classes.subsidaryInput}
@@ -663,7 +664,7 @@ export default function SubsidiaryBusiness() {
                         lg={1}
                         className={clsx(classes.mobileDeleteContainer)}
                       >
-                        <FormControl
+                        <FormControl variant='standard'
                           fullWidth
                           className={clsx(
                             classes.formGroup,
@@ -703,9 +704,9 @@ export default function SubsidiaryBusiness() {
 
                       <Grid item xs={10} sm={5} md={4} lg={4}>
                         <FormControl
+                          variant="standard"
                           fullWidth
-                          className={clsx(classes.formGroup, classes.regcode)}
-                        >
+                          className={clsx(classes.formGroup, classes.regcode)}>
                           <Input
                             className={classes.registrationInput}
                             placeholder={
@@ -755,7 +756,7 @@ export default function SubsidiaryBusiness() {
                         lg={1}
                         className={clsx(classes.desktopDeleteContainer)}
                       >
-                        <FormControl
+                        <FormControl variant='standard'
                           fullWidth
                           className={clsx(
                             classes.formGroup,

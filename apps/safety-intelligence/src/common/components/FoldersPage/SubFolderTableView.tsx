@@ -1,16 +1,11 @@
 import React, { FunctionComponent, useMemo, useState } from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@mui/styles';
 import {
   AssessmentOutlined,
   DashboardOutlined,
   FolderOutlined,
-} from '@material-ui/icons';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+} from '@mui/icons-material';
+import { Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
 import { StyleVariables } from '@alcumus/components';
 import { NavLink } from 'react-router-dom';
 import { ReportListItemProps } from '../../../domain/reportListItemProps';

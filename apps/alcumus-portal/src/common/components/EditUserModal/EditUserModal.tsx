@@ -7,7 +7,8 @@ import {
   StyleVariables,
   Text,
 } from '@alcumus/components';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
   Role,
   RoleAndPermissions,
@@ -16,7 +17,7 @@ import {
 } from '../../types';
 import { useStateFromInput } from '@alcumus/hooks';
 import { updateUser, UpdateUserValidationError } from './updateUser';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { getRoleItems } from '../../utilities';
 import useSWR from 'swr';
 import { ToastContext } from '../../context/ToastContext';

@@ -1,6 +1,6 @@
 parameters:
   - name: nodeVersion
-    default: '14.x'
+    default: '16.x'
   - name: containerRegistry
     default: core-services-dev-uk-registry
   - name: k8sEnvironment
@@ -23,6 +23,7 @@ trigger:
   branches:
     include:
       - develop
+      - feature/node-version-update
   paths:
     include:
       - apps/alcumus-portal/**

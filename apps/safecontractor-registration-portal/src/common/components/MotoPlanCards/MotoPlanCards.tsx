@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
-import AssignmentTurnedInOutlined from '@material-ui/icons/AssignmentTurnedInOutlined';
-import ExpandLessOutlinedIcon from '@material-ui/icons/ExpandLessOutlined';
-import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
-import DoneIcon from '@material-ui/icons/Done';
-import CardContent from '@material-ui/core/CardContent';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
+import AssignmentTurnedInOutlined from '@mui/icons-material/AssignmentTurnedInOutlined';
+import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
+import DoneIcon from '@mui/icons-material/Done';
+import CardContent from '@mui/material/CardContent';
+import { Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { StyleVariables, Button, Image } from '@alcumus/components';
 import clsx from 'clsx';
 import MotoFooterSection from '../MotoFooterSection';
@@ -33,14 +34,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.smaller,
     marginLeft: '16px',
     marginRight: '16px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
   logo: {
     display: 'block',
     margin: 'auto',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: StyleVariables.fonts.size.h2,
       lineHeight: StyleVariables.fonts.lineHeight.h2,
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontSize: StyleVariables.fonts.size.h4,
       lineHeight: StyleVariables.fonts.lineHeight.h4,
       marginTop: '0.5rem',
@@ -92,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   selectPlan: {
     display: 'block',
     margin: 'auto',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -102,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       margin: 0,
     },
   },
@@ -110,21 +111,21 @@ const useStyles = makeStyles((theme) => ({
   displayFlex: {
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       justifyContent: 'start',
     },
   },
   displayPlanContainer: {
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       justifyContent: 'end',
       marginLeft: '-8px',
     },
   },
   textAlign: {
     textAlign: 'center',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       textAlign: 'left',
     },
   },
@@ -172,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('xl')]: {
       padding: '2rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: 0,
     },
   },
@@ -186,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '1rem',
       paddingBottom: '1rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: 0,
     },
   },
@@ -197,7 +198,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '1rem',
       paddingBottom: '1rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: 0,
     },
   },
@@ -207,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardDesktopMiddleContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -215,7 +216,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       paddingBottom: '0.5rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingTop: 0,
     },
   },
@@ -246,7 +247,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -257,7 +258,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileSelectPlanButton: {
     width: '144px',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('xl')]: {
       marginTop: '0.5rem',
       width: '165px',
       height: '2rem',
@@ -266,7 +267,7 @@ const useStyles = makeStyles((theme) => ({
   checkBox: {
     marginLeft: '8px',
     fontSize: '1.2rem',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: 0,
       fontSize: '1.2rem',
     },

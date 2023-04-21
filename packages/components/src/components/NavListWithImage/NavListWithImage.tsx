@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import { NavList } from '../../index';
 import styleVariables from '../../styles/variables';
 import { SplitWithImage } from '../SplitWithImage/SplitWithImage';
 import Text from '../Text';
-import { Grid, Hidden } from '@material-ui/core';
+import { Grid, Hidden } from '@mui/material';
 
 export interface NavListWithImageItem {
   listItem: string;
@@ -61,7 +61,7 @@ export function NavListWithImage({
         <Grid item sm={1}>
           {' '}
         </Grid>
-        <Hidden mdDown={true}>
+        <Hidden lgDown={true}>
           <Grid item sm={5}>
             {' '}
           </Grid>

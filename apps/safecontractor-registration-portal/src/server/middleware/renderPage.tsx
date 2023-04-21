@@ -3,7 +3,7 @@ import { Types } from '@alcumus/core';
 import { NextFunction, Response } from 'express';
 import ReactDOMServer from 'react-dom/server';
 import path from 'path';
-import { StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import configureStore from '../../client/redux/configureStore';
 import Router from '../../common/router';
@@ -18,8 +18,6 @@ export default async function renderPage(
   next: NextFunction
 ) {
   const response = await validateStatusHealth();
-
-  res.header('X-Frame-Options', 'SAMEORIGIN');
   if (req.headers.host?.includes('localhost')) {
     res.header('Access-Control-Allow-Origin', req.headers.host);
   } else {
@@ -64,7 +62,7 @@ export default async function renderPage(
     }
 
     const html = ReactDOMServer.renderToString(
-      <StaticRouter location={req.url} context={context}>
+      <StaticRouter location={req.url} >
         <ReduxStateDecorator>
           <Router />
         </ReduxStateDecorator>

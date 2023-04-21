@@ -1,5 +1,6 @@
 import Page from '../Page';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import React from 'react';
 import styleVariables from '../../styles/variables';
 import Navbar from '../Navbar';

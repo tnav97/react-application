@@ -8,7 +8,8 @@ import {
   StyleVariables,
   Text,
 } from '@alcumus/components';
-import { Grid, IconButton, makeStyles } from '@material-ui/core';
+import { Grid, IconButton } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
   MemberWithUsername,
   Role,
@@ -17,7 +18,7 @@ import {
   InviteUserRequest,
 } from '../../types';
 import { SuccessModal } from '../SuccessModal/SuccessModal';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { getRoleItems } from '../../utilities';
 import { ToastContext } from '../../context/ToastContext';
 import { useSubscriptions } from '../../hooks/useSubscriptions';
@@ -464,7 +465,7 @@ export function InviteUserModal({
                   <Select
                     items={roleItems}
                     value={row.roleId}
-                    onChange={(event) => handleRoleChange(event, index)}
+                    onChange={(event: any) => handleRoleChange(event, index)}
                     label={!index ? t('labels.role') : ''}
                     disabled={isInviting}
                     data-testid="roles"
@@ -476,7 +477,7 @@ export function InviteUserModal({
                       items={row.applicationItems}
                       value={row.selectedApplications}
                       data-testid="application-access"
-                      onChange={(event) =>
+                      onChange={(event: any) =>
                         handleApplicationsChange(event, index)
                       }
                       label={!index ? t('labels.applicationAccess') : ''}

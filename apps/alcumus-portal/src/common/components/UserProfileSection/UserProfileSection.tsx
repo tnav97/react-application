@@ -1,11 +1,8 @@
 import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
-import { makeStyles, Theme } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 import { StyleVariables, Text } from '@alcumus/components';
 import { useStateFromInput } from '@alcumus/hooks';
+import { Button, Grid, Paper, TextField, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   userProfileSection: {

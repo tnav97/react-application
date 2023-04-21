@@ -7,13 +7,13 @@ import {
   StyleVariables,
   AlertSnackbar,
 } from '@alcumus/components';
-import { Divider, Grid } from '@material-ui/core';
+import { Divider, Grid } from '@mui/material';
 import { useStateFromInput } from '@alcumus/hooks';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import { format } from 'date-fns';
 import useSWR from 'swr';
 import { useTranslation } from 'react-i18next';
-import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
+import { ToggleButton, ToggleButtonGroup } from '@mui/lab';
 import { updateSubscriptionLicenses } from './updateSubscriptionLicenses';
 import { ToastContext } from '../../../context/ToastContext';
 

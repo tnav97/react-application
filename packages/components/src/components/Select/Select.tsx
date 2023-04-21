@@ -4,12 +4,12 @@ import {
   FormHelperText,
   ListItemIcon,
   ListItemText,
-  makeStyles,
   MenuItem,
   Select as BaseSelect,
   SelectProps as BaseSelectProps,
-} from '@material-ui/core';
-import { ExpandMore } from '@material-ui/icons';
+} from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import { ExpandMore } from '@mui/icons-material';
 import Label from './Label';
 import StyleVariables from '../../styles/variables';
 

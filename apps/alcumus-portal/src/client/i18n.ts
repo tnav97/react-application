@@ -9,6 +9,7 @@ const options: InitOptions = {
   lng: window.__DETECTED_LANGUAGE__,
   debug: !IS_PRODUCTION,
   returnEmptyString: true,
+  returnNull: false,
   interpolation: {
     escapeValue: false,
   },
@@ -16,6 +17,12 @@ const options: InitOptions = {
     useSuspense: false,
   },
 };
+
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    returnNull: false;
+  }
+}
 
 i18n
   // we use the server to serve locale files (statically)

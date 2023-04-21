@@ -1,8 +1,9 @@
 import React, { ReactChild, ReactFragment, ReactPortal } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
-import { makeStyles, Theme } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import ThemeProvider from '@mui/styles/ThemeProvider';
+import { StyledEngineProvider, Theme } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Container from '@mui/material/Container';
 import clsx from 'clsx';
 import AlcumusTheme from '../../styles/theme';
 import styleVariables from '../../styles/variables';
@@ -40,11 +41,13 @@ export default function Page({
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container className={clsx(classes.page, className)} maxWidth={false}>
-        {children}
-      </Container>
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container className={clsx(classes.page, className)} maxWidth={false}>
+          {children}
+        </Container>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }

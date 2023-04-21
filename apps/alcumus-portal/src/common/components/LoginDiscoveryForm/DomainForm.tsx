@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import {
   Input,
@@ -11,7 +10,7 @@ import {
 } from '@alcumus/components';
 import { KEY_MAP } from '../../constants';
 import { LoginFlowHooks } from '../../hooks/LoginLogoutFlow';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { Checkbox, FormControlLabel } from '@mui/material';
 
 interface DomainFormProps {
   onNext: (domain: string) => void;

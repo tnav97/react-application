@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { matchPath, useLocation, useHistory } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 import {
   Box,
   IconButton,
-  makeStyles,
   TableCell,
   TableRow,
   Table as MuiTable,
   TableContainer,
   TableHead,
   TableBody,
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   Button,
   OutlinedIcon,

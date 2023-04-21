@@ -1,10 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { makeStyles, Theme, Typography, Avatar } from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+import { Theme, Typography, Avatar, Grid, FormControl, MenuItem, Select } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Button, StyleVariables, Text } from '@alcumus/components';
-import Grid from '@material-ui/core/Grid';
 import { useTranslation } from 'react-i18next';
 import {
   useApplicationCategories,
@@ -171,12 +168,12 @@ export default function HomePageAllApps({
         <Grid item xs={12} sm={6} md={5} lg={4}>
           <FormControl variant="outlined" className={classes.formControl}>
             <Select
+              variant="standard"
               labelId="categories-label"
               id="categories"
               className={classes.field}
               value={category}
-              onChange={handleCategorySelect}
-            >
+              onChange={handleCategorySelect}>
               <MenuItem value={'All categories'}>{t('allCategories')}</MenuItem>
               {productCategories?.map((category) => (
                 <MenuItem

@@ -3,11 +3,12 @@ import { useSetRecoilState } from 'recoil';
 import { withSkeletonLoading } from '../../hocs/withLoading';
 import { NavLink, useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { IconButton, makeStyles } from '@material-ui/core';
+import { IconButton } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import ChevronRightOutlinedIcon from '@material-ui/icons/ChevronRightOutlined';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import ReportOptionsColumn from '../ReportTable/ReportOptionsColumn';
 import { updateFolderModalVisibleState } from '../FoldersPage/UpdateFolderModal';
 

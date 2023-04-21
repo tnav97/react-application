@@ -11,7 +11,6 @@ import {
 import {
   Box,
   IconButton,
-  makeStyles,
   Table,
   TableBody,
   TableCell,
@@ -19,7 +18,8 @@ import {
   TableHead,
   TableRow,
   Link as MuiLink,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import AddSubscription from './AddSubscription';
 import { Roles } from '../../constants';
 import useSWR from 'swr';

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Box, Card, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Card, Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Page, StyleVariables, Image } from '@alcumus/components';
-import { TFunction, Trans } from 'react-i18next';
+import { TFunction } from 'i18next';
 import AboutSection from '../../components/AboutSection';
 import FooterSection from '../../components/FooterSection';
 import { CardSelected } from '../../constants';
@@ -11,6 +12,7 @@ import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import ReadMore from '../../components/ReadMore';
 import { useHistory } from 'react-router-dom';
+import { Trans } from 'react-i18next';
 import ProgressBar from '../../components/ProgressBar';
 
 export interface DoesCustomerRequireSupportForAssessmentProps {
@@ -30,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '14px',
       fontWeight: StyleVariables.fonts.weight.medium,
       fontSize: StyleVariables.fonts.size.h5,
@@ -56,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     height: '208px',
     marginLeft: '8px',
     marginRight: '8px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
       margin: 'auto',
       marginBottom: '8px',
@@ -73,19 +75,19 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
   thumbsUp: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   thumbsDown: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -95,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     borderColor: StyleVariables.colors.base.primary,
   },
   cardContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: 0,
       marginLeft: '20px',
@@ -117,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -139,7 +141,7 @@ export function DoesCustomerRequireSupportForAssessment({
   const [selectedValue, setSelectedValue] = React.useState<string>('');
   const dispatch = useDispatch();
   const history = useHistory();
-  const needSupportSelector = useSelector((state) => state.needSupport);
+  const needSupportSelector = useSelector((state: any) => state.needSupport);
   const contents = [
     {
       id: 0,
@@ -168,8 +170,8 @@ export function DoesCustomerRequireSupportForAssessment({
       dispatch({
         type: footerProps.footerSectionProps.page,
         payload: {
-          selected: selected,
-          selectedValue: selectedValue,
+          selected,
+          selectedValue,
         },
       });
       dispatch({
@@ -198,7 +200,7 @@ export function DoesCustomerRequireSupportForAssessment({
       mobileText: 'View pricing plans',
       text: 'View pricing plans',
       prevText: 'Go back',
-      impaired: impaired,
+      impaired,
       page: 'support',
     },
   };
@@ -207,7 +209,7 @@ export function DoesCustomerRequireSupportForAssessment({
     footerSectionProps: {
       to: 'choosePlan',
       from: 'responseTime',
-      impaired: impaired,
+      impaired,
       page: 'support',
     },
   };

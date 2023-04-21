@@ -1,5 +1,6 @@
 import { Text, Button, StyleVariables } from '@alcumus/components';
-import { Grid, Hidden, makeStyles } from '@material-ui/core';
+import { Grid, Hidden } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { TFunction } from 'i18next';
 import React from 'react';
 import { QuestionnaireFields } from '../../../types/QuestionnaireField';

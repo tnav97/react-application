@@ -1,5 +1,6 @@
 import { Text, StyleVariables } from '@alcumus/components';
-import { alpha, makeStyles } from '@material-ui/core';
+import { alpha } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import React from 'react';
 

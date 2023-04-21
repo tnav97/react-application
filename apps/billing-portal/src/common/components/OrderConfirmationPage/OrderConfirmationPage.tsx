@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { ActionPage, TranslateReady } from '@alcumus/components';
 import { TFunction } from 'i18next';
-import { makeStyles, Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { orderConfirmation } from '../../constants/images';
 import getSuccessRedirectUrl from '../../services/getSuccessRedirectUrl';
 

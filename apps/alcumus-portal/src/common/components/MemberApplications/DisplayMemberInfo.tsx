@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import {
   Text,
   OutlinedIcon,
@@ -7,6 +7,7 @@ import {
   OutlinedIconType,
 } from '@alcumus/components';
 import { UserDetails } from '../../types';
+import { Box } from '@mui/material';
 
 interface DisplayMemberInfoProps {
   member: UserDetails;

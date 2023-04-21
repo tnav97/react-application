@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, StyleVariables } from '@alcumus/components';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from 'react-router-dom';
 import { FooterBackgroundColor } from '../constants';
 interface FooterSectionMainProps {
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     height: '40px',
     fontSize: StyleVariables.fonts.size.regular,
     lineHeight: StyleVariables.fonts.lineHeight.h3,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: 'fill-available',
     },
   },
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: StyleVariables.colors.action.secondary.default,
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: 'fill-available',
     },
   },
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: StyleVariables.fonts.weight.semiBold,
     fontSize: StyleVariables.fonts.mobile.size.h5,
     lineHeight: StyleVariables.fonts.mobile.lineHeight.h4,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       fontSize: StyleVariables.fonts.mobile.size.h6,
     },
   },

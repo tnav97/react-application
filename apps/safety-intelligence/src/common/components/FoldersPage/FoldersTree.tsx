@@ -15,7 +15,7 @@ import { TFunction } from 'i18next';
 import { withTranslation } from 'react-i18next';
 import { TreeSelect } from 'antd';
 import { TreeSelectProps } from 'antd/lib/tree-select';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables } from '@alcumus/components';
 
 interface Props {

@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Card,
-  CircularProgress,
-  FormControl,
-  Grid,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
+import { Box, Card, CircularProgress, FormControl, Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import {
   Page,
   StyleVariables,
@@ -17,7 +10,7 @@ import {
 } from '@alcumus/components';
 import AboutSection from '../../components/AboutSection';
 import FooterSection from '../../components/FooterSection';
-import DoneIcon from '@material-ui/icons/Done';
+import DoneIcon from '@mui/icons-material/Done';
 import clsx from 'clsx';
 import MobileFooterSection from '../../components/MobileFooterSection';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
@@ -49,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h3,
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     marginTop: '24px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '16px',
       marginLeft: '1rem',
       marginRight: '1rem',
@@ -59,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '14px',
       fontWeight: StyleVariables.fonts.weight.medium,
       fontSize: StyleVariables.fonts.size.h5,
@@ -78,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginTop: '12px',
     marginBottom: '1rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
       paddingLeft: '4px',
@@ -99,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1rem',
     marginRight: '1rem',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '1.5rem',
       marginRight: '1.5rem',
     },
@@ -108,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     height: '208px',
     marginLeft: '8px',
     marginRight: '8px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
       margin: 'auto',
       marginTop: '8px',
@@ -125,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '8px',
     marginLeft: '1rem',
     marginRight: '1rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: '1rem',
       marginLeft: '1.3rem',
     },
@@ -144,13 +137,13 @@ const useStyles = makeStyles((theme) => ({
   },
   thumbsUp: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   thumbsDown: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -179,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
   },
   marginTop: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: '-3px',
       marginLeft: '20px',
@@ -191,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 80px)',
     },
   },
@@ -201,7 +194,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -222,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: 0,
       marginLeft: '20px',
@@ -240,7 +233,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ReferralCodePage(referralProps: ReferralProps) {
   const [referralMessage, setreferralMessage] = useState('');
-  const referralValue = useSelector((state) => state.referral);
+  const referralValue = useSelector((state: any) => state.referral);
   const [selected, setSelected] = React.useState(
     referralValue.ReferralCode ?? CardSelected.Not_Selected
   );
@@ -506,7 +499,7 @@ export default function ReferralCodePage(referralProps: ReferralProps) {
           <Grid container>
             <Grid item sm={2} md={4} lg={4}></Grid>
             <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
-              <FormControl fullWidth className={clsx(classes.formGroup)}>
+              <FormControl variant="standard" fullWidth className={clsx(classes.formGroup)}>
                 <Input
                   className={classes.referralInput}
                   state={referralError ? 'error' : 'default'}

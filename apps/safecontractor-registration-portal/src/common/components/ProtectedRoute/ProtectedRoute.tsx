@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Redirect, Route } from 'react-router-dom';
+import { Navigate, Route } from 'react-router-dom';
 import { IReduxRootState } from '../../../client/redux/reducers';
 import { PrevUrl } from '../../pages/RedirectTo/PrevUrl';
 
@@ -63,7 +63,7 @@ function ProtectedRoute({
   if (pathName === 'referral') {
     const redirectDRef = redirectBack(createAccountState);
     if (redirectDRef === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDRef === 2) {
       return <PrevUrl />;
     }
@@ -71,7 +71,7 @@ function ProtectedRoute({
   if (pathName === 'employee') {
     const redirectDEmp = redirectBack(referralValue);
     if (redirectDEmp === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDEmp === 2) {
       return <PrevUrl />;
     }
@@ -79,7 +79,7 @@ function ProtectedRoute({
   if (pathName === 'companyType') {
     const redirectDCT = redirectBack(employeeCardValue);
     if (redirectDCT === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDCT === 2) {
       return <PrevUrl />;
     }
@@ -87,7 +87,7 @@ function ProtectedRoute({
   if (pathName === 'SSIPQuestion') {
     const redirectDCT = redirectBack(companyTypeValue);
     if (redirectDCT === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDCT === 2) {
       return <PrevUrl />;
     }
@@ -95,7 +95,7 @@ function ProtectedRoute({
   if (pathName === 'subsidiaryBusiness') {
     const redirectDSub = redirectBack(ssipValueSelector);
     if (redirectDSub === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDSub === 2) {
       return <PrevUrl />;
     }
@@ -103,7 +103,7 @@ function ProtectedRoute({
   if (pathName === 'responseTime') {
     const redirectDRes = redirectBack(subsidiaryListSelector);
     if (redirectDRes === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDRes === 2) {
       return <PrevUrl />;
     }
@@ -111,7 +111,7 @@ function ProtectedRoute({
   if (pathName === 'needSupport') {
     const redirectDNeed = redirectBack(responseTimeSelector);
     if (redirectDNeed === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDNeed === 2) {
       return <PrevUrl />;
     }
@@ -122,21 +122,21 @@ function ProtectedRoute({
       undefined
     );
     if (subsidiaryPageValues > -1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (subsidiaryPageLength === 0) {
       return <PrevUrl />;
     } else {
       if (subsidiaryListSelector?.selectedValue === 'Yes') {
         const redirectDS = redirectBack(companyTypeValue);
         if (redirectDS === 1) {
-          return <Redirect to="/" />;
+          return <Navigate to="/" />;
         } else if (redirectDS === 2) {
           return <PrevUrl />;
         }
       } else {
         const redirectDn = redirectBack(needSupportSelector);
         if (redirectDn === 1) {
-          return <Redirect to="/" />;
+          return <Navigate to="/" />;
         } else if (redirectDn === 2) {
           return <PrevUrl />;
         }
@@ -146,7 +146,7 @@ function ProtectedRoute({
   if (pathName === 'companyDetails') {
     const redirectDComp = redirectBack(choosePlansSelector);
     if (redirectDComp === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDComp === 2) {
       return <PrevUrl />;
     }
@@ -154,7 +154,7 @@ function ProtectedRoute({
   if (pathName === 'paymentDetails') {
     const redirectDPay = redirectBack(companyDetailsSelector);
     if (redirectDPay === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDPay === 2) {
       return <PrevUrl />;
     }
@@ -162,18 +162,17 @@ function ProtectedRoute({
   if (pathName === 'orderConfirmation') {
     const redirectDOrder = redirectBack(confirmationState);
     if (redirectDOrder === 1) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     } else if (redirectDOrder === 2) {
       return <PrevUrl />;
     }
   }
   return (
     <Route
-      exact={exact}
       path={path}
-      render={(props) =>
+      Component={(props) =>
         confirmationState.isRegistered ? (
-          <Redirect to={isRedirect} />
+          <Navigate to={isRedirect} />
         ) : (
           <Component {...props} />
         )

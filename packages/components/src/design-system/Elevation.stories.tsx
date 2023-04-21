@@ -1,12 +1,14 @@
 import React from 'react';
-import { Grid, makeStyles, Paper } from '@material-ui/core';
+import { Grid, Paper, Theme } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 export default {
   title: 'Style Guide/Elevation',
   component: 'Elevation',
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
     marginTop: '40px',

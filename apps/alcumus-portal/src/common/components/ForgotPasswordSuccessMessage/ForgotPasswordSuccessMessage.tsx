@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
-import Icon from '@material-ui/core/Icon';
+import { Icon } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
-import InfoRounded from '@material-ui/icons/InfoRounded';
+import InfoRounded from '@mui/icons-material/InfoRounded';
 import clsx from 'clsx';
 import Link from '../../components/Link';
 

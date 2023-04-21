@@ -3,7 +3,7 @@ import {
   Text,
   Button as BaseButton,
 } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
 import { TFunction } from 'i18next';

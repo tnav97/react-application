@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import makeStyles from '@mui/styles/makeStyles';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import { useHistory, useLocation, matchPath } from 'react-router-dom';
 import { StyleVariables } from '../../index';
 import { Drawer } from './Drawer';
 import clsx from 'clsx';
-import { Divider, Tooltip } from '@material-ui/core';
+import { Divider, Tooltip } from '@mui/material';
 
 export interface DrawerItem {
   title: string;
@@ -123,7 +123,7 @@ function DrawerListItem({ drawerItem: item }: { drawerItem: DrawerItem }) {
   );
 }
 
-export function DrawerContent({ drawerItems }: DrawerContentProps) {
+function DrawerContent({ drawerItems }: DrawerContentProps) {
   const classes = useStyles();
 
   return (
@@ -134,3 +134,5 @@ export function DrawerContent({ drawerItems }: DrawerContentProps) {
     </div>
   );
 }
+
+export default DrawerContent;

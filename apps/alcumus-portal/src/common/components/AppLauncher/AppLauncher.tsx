@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { LoadingPage } from '@alcumus/components';
 import { Product } from '../../types';
 import { LoginFlowHooks } from '../../hooks/LoginLogoutFlow';

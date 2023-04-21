@@ -1,7 +1,7 @@
 import React from 'react';
 import InputWithCommonProps from './InputWithCommonProps';
 import { Field } from 'formik';
-import { Grid, GridProps } from '@material-ui/core';
+import { Grid, GridProps } from '@mui/material';
 
 interface TextInputProps {
   gridItemProps: GridProps;

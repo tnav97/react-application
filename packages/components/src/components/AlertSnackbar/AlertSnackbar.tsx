@@ -1,7 +1,7 @@
-import { Snackbar, SnackbarProps } from '@material-ui/core';
+import { Snackbar, SnackbarProps } from '@mui/material';
 import React from 'react';
 import Alert, { AlertSeverity } from '../Alert';
-import { SnackbarCloseReason } from '@material-ui/core/Snackbar';
+import { SnackbarCloseReason } from '@mui/material/Snackbar';
 
 export interface AlertSnackbarProps extends SnackbarProps {
   message: string;

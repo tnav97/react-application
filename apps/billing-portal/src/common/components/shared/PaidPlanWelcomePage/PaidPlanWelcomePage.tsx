@@ -9,9 +9,10 @@ import { useQuery } from '@alcumus/hooks';
 import dateFormat from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import { enCA, frCA } from 'date-fns/locale';
-import { Divider, Grid, makeStyles, Theme } from '@material-ui/core';
-import { Add as AddIcon, Settings as SettingsIcon } from '@material-ui/icons';
-import { TFunction } from 'react-i18next';
+import { Divider, Grid, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Add as AddIcon, Settings as SettingsIcon } from '@mui/icons-material';
+import { TFunction } from 'i18next';
 import React from 'react';
 
 import postMessageToWindowParent, {

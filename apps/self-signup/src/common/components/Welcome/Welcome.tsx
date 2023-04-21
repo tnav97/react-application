@@ -5,7 +5,8 @@ import {
   PageWithNavbar as SelfSignupPage,
   StyleVariables,
 } from '@alcumus/components';
-import { Grid, makeStyles, Hidden } from '@material-ui/core';
+import { Grid, Hidden } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
 import React, { useEffect, useState } from 'react';

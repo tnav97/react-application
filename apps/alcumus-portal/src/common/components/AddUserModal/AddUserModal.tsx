@@ -12,8 +12,8 @@ import {
   Checkbox,
   FormControlLabel,
   Grid,
-  makeStyles,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Role, RoleAndPermissions } from '../../types';
 import { useStateFromInput } from '@alcumus/hooks';
 import {
@@ -21,7 +21,8 @@ import {
   PostCreateUserValidationError,
 } from './postCreateUser';
 import { SuccessModal } from '../SuccessModal/SuccessModal';
-import { TFunction, Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { getRoleItems } from '../../utilities';
 import { ToastContext } from '../../context/ToastContext';
 import isEmail from 'validator/lib/isEmail';

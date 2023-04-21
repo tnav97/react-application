@@ -1,7 +1,7 @@
 import { Button, Modal, Select } from '@alcumus/components';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import React, { useEffect, useState } from 'react';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { UserProfile } from '../../../types';
 import { loadTimezones } from './loadTimezones';
 import {

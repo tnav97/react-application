@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { Input, Modal, Button, Text } from '@alcumus/components';
-import { Grid, makeStyles, Box, Avatar } from '@material-ui/core';
-import { TFunction } from 'react-i18next';
+import { Grid, Box, Avatar } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { TFunction } from 'i18next';
 
 interface EditUserProfileProps {
   firstName: string;

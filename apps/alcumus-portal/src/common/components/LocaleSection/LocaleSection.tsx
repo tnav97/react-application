@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MyAccountSection from '../MyAccountSection';
 import { TFunction } from 'i18next';
 import { Modal, Text } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import EditLocaleModal from './EditLocaleModal';
 import {
   getLanguageNameFromCode,

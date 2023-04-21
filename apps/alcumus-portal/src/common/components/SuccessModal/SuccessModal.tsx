@@ -5,9 +5,9 @@ import {
   Text,
   StyleVariables,
 } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 
 export interface SuccessModalProps {
   t: TFunction;

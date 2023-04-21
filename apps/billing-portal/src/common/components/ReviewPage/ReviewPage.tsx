@@ -13,14 +13,13 @@ import {
   Checkbox,
   FormControlLabel,
   Grid,
-  makeStyles,
   Theme,
   Link,
-} from '@material-ui/core';
-import { TFunction, Trans } from 'react-i18next';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Trans } from 'react-i18next';
+import { TFunction } from 'i18next';
 import clsx from 'clsx';
-import ReviewInputs from './ReviewInputs';
-import ReviewSummary from './ReviewSummary';
 import {
   LINK_CANCELLATION_POLICY,
   LINK_REFUND_POLICY,
@@ -28,6 +27,8 @@ import {
 } from '../../constants/links';
 import getStarted from '../../services/getStarted';
 import Stepper from '../Stepper/Stepper';
+import ReviewInputs from './ReviewInputs/ReviewInputs';
+import ReviewSummary from './ReviewSummary/ReviewSummary';
 
 interface ReviewPageProps {
   t: TFunction;

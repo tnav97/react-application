@@ -6,7 +6,7 @@ import EditEmailModalContent from './EditEmailModalContent';
 import EditPasswordModalContent from './EditPasswordModalContent';
 import EmailUpdateSuccessModalContent from './EmailUpdateSuccessModalContent';
 import MyAccountSection from '../MyAccountSection';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { useUserLogin } from '../../hooks/useUserLogin';
 import Analytics from '@alcumus/analytics-package';
 import useSWR from 'swr';

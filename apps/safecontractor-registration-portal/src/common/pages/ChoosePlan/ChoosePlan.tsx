@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { Page, StyleVariables } from '@alcumus/components';
 import Loading from '../../components/Loading';
 import AboutSection from '../../components/AboutSection';
@@ -32,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     textAlign: 'center',
     marginTop: '1rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '1.5rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '1rem',
     },
   },
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '12px',
     color: StyleVariables.colors.text.default,
     marginBottom: '2rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -79,17 +80,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardsContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       paddingLeft: '8px',
       paddingRight: '8px',
     },
   },
   boxContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
       marginRight: 0,
     },
@@ -97,14 +98,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function ChoosePlanPage(choosePlanProps: ChoosePlanProps) {
   const classes = useStyles();
-  const employeeCardValue = useSelector((state) => state.employee);
-  const companyTypeValue = useSelector((state) => state.companyType);
-  const subsidiaryListSelector = useSelector((state) => state.subsidiary);
-  const referralValue = useSelector((state) => state.referral);
-  const needSupportSelector = useSelector((state) => state.needSupport);
-  const responseTimeSelector = useSelector((state) => state.responseTime);
+  const employeeCardValue = useSelector((state: any) => state.employee);
+  const companyTypeValue = useSelector((state: any) => state.companyType);
+  const subsidiaryListSelector = useSelector((state: any) => state.subsidiary);
+  const referralValue = useSelector((state: any) => state.referral);
+  const needSupportSelector = useSelector((state: any) => state.needSupport);
+  const responseTimeSelector = useSelector((state: any) => state.responseTime);
   const dispatch = useDispatch();
-  const choosePlansSelector = useSelector((state) => state.choosePlans);
+  const choosePlansSelector = useSelector((state: any) => state.choosePlans);
   const [contents, setPlanContent] = React.useState<Array<PlanDetail>>([]);
   const [selected, setSelected] = React.useState<number>(0);
   const [loading, setLoading] = React.useState(false);

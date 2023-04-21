@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Page, StyleVariables } from '@alcumus/components';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Page, StyleVariables  } from '@alcumus/components';
+import { Typography } from '@mui/material';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import AboutSection from '../../components/AboutSection';
 import { mobileLiveChatContainerBox } from '../../constants';
 import clsx from 'clsx';

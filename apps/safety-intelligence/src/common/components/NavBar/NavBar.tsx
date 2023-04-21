@@ -5,8 +5,8 @@ import {
   Navigation,
   Page,
 } from '@alcumus/components';
-import MToolbar from '@material-ui/core/Toolbar';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import MToolbar from '@mui/material/Toolbar';
+import { createStyles, makeStyles } from '@mui/styles';
 import '../../theme/SafetyIntelligenceTheme';
 import AppMenu from './AppMenu';
 import UserMenu from './UserMenu';
@@ -17,12 +17,12 @@ import FavoriteRoute from '../../../routes/FavoriteRoute';
 import PopularRoute from '../../../routes/PopularRoute';
 import RecentRoute from '../../../routes/RecentRoute';
 import ReportsRoute from '../../../routes/ReportsRoute';
-import FolderOutlinedIcon from '@material-ui/icons/FolderOutlined';
-import AssessmentOutlinedIcon from '@material-ui/icons/AssessmentOutlined';
-import QueryBuilderOutlinedIcon from '@material-ui/icons/QueryBuilderOutlined';
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
-import TrendingUpOutlinedIcon from '@material-ui/icons/TrendingUpOutlined';
-import FolderSharedOutlinedIcon from '@material-ui/icons/FolderSharedOutlined';
+import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
+import QueryBuilderOutlinedIcon from '@mui/icons-material/QueryBuilderOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
+import FolderSharedOutlinedIcon from '@mui/icons-material/FolderSharedOutlined';
 import { TFunction, withTranslation } from 'react-i18next';
 
 type Props = {

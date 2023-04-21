@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableRow from '@material-ui/core/TableRow';
+import { makeStyles } from '@mui/styles';
 import { MemberDetails } from '../../types';
-import {
-  IconButton,
-  makeStyles,
-  TableHead,
-  Link,
-  Grid,
-} from '@material-ui/core';
 import {
   Button,
   Input,
@@ -28,9 +17,10 @@ import MemberApplications from '../MemberApplications';
 import { useOrganizationMembers } from '../../hooks/useOrganizationMembers';
 import OrganizationMemberContextMenu from './OrganizationMemberContextMenu';
 import InviteUserModal from '../InviteUserModal';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import StatusDisplay from '../StatusDisplay';
 import { MemberStatus } from '../../constants';
+import { Grid, IconButton, Link, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 const useStyles = makeStyles(() => ({
   greeting: {

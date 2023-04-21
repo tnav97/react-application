@@ -1,5 +1,5 @@
 import React from 'react';
-import { createTheme, Typography } from '@material-ui/core';
+import { createTheme, Typography } from '@mui/material';
 import Page from './Page';
 import variables from '../../styles/variables';
 
@@ -24,9 +24,9 @@ export const withDefaultTheme = () => (
 
 export const withCustomTheme = () => (
   <Page
-    theme={createTheme({
+    theme={createTheme(({
       palette: {
-        type: 'light',
+        mode: 'light',
         primary: {
           main: '#000',
           contrastText: '#ddd',
@@ -72,7 +72,7 @@ export const withCustomTheme = () => (
           fontFamily: variables.fonts.family.body,
         },
       },
-    })}
+    }))}
   >
     <Typography variant="h1" color="secondary">
       Page Component

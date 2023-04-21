@@ -10,7 +10,7 @@ import { TFunction } from 'i18next';
 import { withTranslation } from 'react-i18next';
 import FoldersTree, { selectedFolderState } from '../FoldersPage/FoldersTree';
 import CustomModal from './CustomModal';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import { showToastState } from '../Toast/Toast';
 

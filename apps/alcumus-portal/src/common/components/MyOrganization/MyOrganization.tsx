@@ -1,7 +1,9 @@
 import React from 'react';
-import { Grid, makeStyles, Paper, withStyles } from '@material-ui/core';
+import { Grid, Paper } from '@mui/material';
+import { makeStyles,withStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
-import { TFunction, withTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { MyOrganizationDetails } from '../../types';
 import OrganizationDetailsSection from './OrganizationDetailsSection/index';
 import ContactInformationSection from './ContactInformationSection/index';

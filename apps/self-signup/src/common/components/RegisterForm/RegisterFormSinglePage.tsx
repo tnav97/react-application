@@ -1,6 +1,7 @@
 import { Form, Formik } from 'formik';
 import { TFunction } from 'i18next';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import { RegisterFormData } from '../../../client/redux/reducers/register-reducer';
 import RegisterFormStep1 from './Steps/RegisterFormStep1';

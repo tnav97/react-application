@@ -1,11 +1,12 @@
 import React from 'react';
-import { IconButton, makeStyles, Snackbar } from '@material-ui/core';
-import MuiAlert from '@material-ui/lab/Alert';
+import { IconButton, Snackbar } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import MuiAlert from '@mui/lab/Alert';
 import { atom, useRecoilState } from 'recoil';
 import { StyleVariables } from '@alcumus/components';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
 
 interface StyleProps {
   severity: 'success' | 'error';

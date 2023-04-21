@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { createTheme } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { createTheme } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import Page from './Page';
 import StyleVariables from '../../styles/variables';
 
@@ -17,15 +17,15 @@ describe('Page', () => {
   });
 
   test('it renders with given theme', () => {
-    const customTheme = createTheme({
+    const customTheme = createTheme(({
       palette: {
-        type: 'dark',
+        mode: 'dark',
         primary: {
           main: StyleVariables.colors.base.primary,
           contrastText: StyleVariables.colors.base.critical,
         },
       },
-    });
+    }));
 
     render(
       <Page theme={customTheme}>

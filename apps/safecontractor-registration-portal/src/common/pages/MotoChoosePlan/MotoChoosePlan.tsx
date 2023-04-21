@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { LoadingPage, Page, StyleVariables } from '@alcumus/components';
 import MotoAboutSection from '../../components/MotoAboutSection';
 import MotoPlanCard from '../../components/MotoPlanCards';
@@ -31,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     textAlign: 'center',
     marginTop: '1rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '1.5rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '1rem',
     },
   },
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -74,17 +75,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardsContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       paddingLeft: '8px',
       paddingRight: '8px',
     },
   },
   boxContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
       marginRight: 0,
     },
@@ -92,14 +93,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function MotoChoosePlanPage(choosePlanProps: ChoosePlanProps) {
   const classes = useStyles();
-  const employeeCardValue = useSelector((state) => state.motoEmployee);
-  const companyTypeValue = useSelector((state) => state.motoCompanyType);
-  const subsidiaryListSelector = useSelector((state) => state.motoSubsidiary);
-  const referralValue = useSelector((state) => state.motoReferral);
-  const needSupportSelector = useSelector((state) => state.motoNeedSupport);
-  const responseTimeSelector = useSelector((state) => state.motoResponseTime);
+  const employeeCardValue = useSelector((state: any) => state.motoEmployee);
+  const companyTypeValue = useSelector((state: any) => state.motoCompanyType);
+  const subsidiaryListSelector = useSelector((state: any) => state.motoSubsidiary);
+  const referralValue = useSelector((state: any) => state.motoReferral);
+  const needSupportSelector = useSelector((state: any) => state.motoNeedSupport);
+  const responseTimeSelector = useSelector((state: any) => state.motoResponseTime);
   const dispatch = useDispatch();
-  const choosePlansSelector = useSelector((state) => state.motoChoosePlans);
+  const choosePlansSelector = useSelector((state: any) => state.motoChoosePlans);
   const [contents, setPlanContent] = React.useState<Array<PlanDetail>>([]);
   const [selected, setSelected] = React.useState<number>(0);
   const [loading, setLoading] = React.useState(false);

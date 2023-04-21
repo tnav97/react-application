@@ -1,5 +1,6 @@
 import { useStateFromInput } from '@alcumus/hooks';
-import { Divider, makeStyles, Menu, MenuItem, Theme } from '@material-ui/core';
+import { Divider, Menu, MenuItem, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import React, { useCallback, useRef, useState } from 'react';
 import { Button, Input, StyleVariables } from '@alcumus/components';

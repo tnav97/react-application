@@ -1,10 +1,5 @@
-import {
-  Card as BaseCard,
-  makeStyles,
-  CardHeader,
-  CardContent,
-  CardMedia,
-} from '@material-ui/core';
+import { Card as BaseCard, CardHeader, CardContent, CardMedia } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import React from 'react';
 import styleVariables from '../../styles/variables';
 import Text from '../Text';

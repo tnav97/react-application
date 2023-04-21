@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import AboutSection from '../../components/AboutSection';
-import {
-  Grid,
-  makeStyles,
-  CircularProgress,
-  Divider,
-  IconButton,
-  ListItem,
-} from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import Typography from '@material-ui/core/Typography';
+import { Grid, CircularProgress, Divider, IconButton, ListItem } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import FormControl from '@mui/material/FormControl';
+import Typography from '@mui/material/Typography';
 import ExpandableCard from '../../components/ExpandableCard';
-import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import { getRegionNameFromCode } from '../../../lib/utils/localeUtils';
 import FooterSection from '../../components/FooterSection';
 import {
@@ -40,7 +34,7 @@ import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { postcodeValidator } from 'postcode-validator';
 import { Address, CompanyDetails } from '../../types';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Autocomplete from '@mui/material/Autocomplete';
 import { Suggestion } from '../../../server/models/postAddressLookup';
 import ProgressBar from '../../components/ProgressBar';
 
@@ -107,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '10px',
       paddingLeft: '16px',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '10px',
     },
   },
@@ -125,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '8em',
     paddingTop: '8px',
     paddingBottom: '8px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 0,
       paddingRight: 0,
       height: '40px',
@@ -166,7 +160,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -184,11 +178,11 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '16px',
   },
   boxContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '7.25rem',
       marginRight: '7.25rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
@@ -197,7 +191,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -208,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -259,8 +253,8 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
     []
   );
   const dispatch = useDispatch();
-  const companyDetailsSelector = useSelector((state) => state.companyDetails);
-  const referralValueSelector = useSelector((state) => state.referral);
+  const companyDetailsSelector = useSelector((state: any) => state.companyDetails);
+  const referralValueSelector = useSelector((state: any) => state.referral);
   const [billingAddressSuggestions, setBillingAddressSuggestions] = useState<
     string[]
   >([]);
@@ -276,7 +270,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
   const [showCharityDetails, setShowCharityDetails] = useState(false);
   const [canSubmitForm, setCanSubmitForm] = useState(false);
   const [sendInviteWhenSaving, setSendInviteWhenSaving] = useState(false);
-  const companyTypeValue = useSelector((state) => state.companyType);
+  const companyTypeValue = useSelector((state: any) => state.companyType);
   const [registrationError, setRegistrationError] = useState(false);
   const [registrationMessage, setRegistrationMessage] = useState('');
   const [landlineError, setLandlineError] = useState(false);
@@ -768,7 +762,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                     showRegistrationNumberDetails || showRegistrationDetails
                   ) || showRegistrationNumberDetails ? (
                     <Grid item xs={12}>
-                      <FormControl fullWidth className={classes.formGroup}>
+                      <FormControl variant="standard" fullWidth className={classes.formGroup}>
                         <Input
                           type="text"
                           label="Company name"
@@ -788,7 +782,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                   ) : (
                     <Grid container>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Company name"
@@ -806,7 +800,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Company registration year"
@@ -840,7 +834,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         sm={6}
                         className={classes.registrationRightContainer}
                       >
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant='standard' fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Company registration number"
@@ -872,7 +866,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         sm={6}
                         className={classes.registrationLeftContainer}
                       >
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant='standard' fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Company registration year"
@@ -900,13 +894,8 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                   )}
                   {showCharityDetails && (
                     <Grid container>
-                      <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        className={classes.registrationRightContainer}
-                      >
-                        <FormControl fullWidth className={classes.formGroup}>
+                      <Grid item xs={12} sm={6}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Charity number"
@@ -938,7 +927,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         sm={6}
                         className={classes.registrationLeftContainer}
                       >
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Charity incorporating/reg year"
@@ -965,7 +954,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                     </Grid>
                   )}
                   <Grid item xs={12}>
-                    <FormControl fullWidth className={classes.formGroup}>
+                    <FormControl variant="standard" fullWidth className={classes.formGroup}>
                       <Input
                         type="text"
                         label="Website"
@@ -997,7 +986,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                     </Typography>
                   </Grid>
                   <Grid item xs={12}>
-                    <FormControl fullWidth className={clsx(classes.formGroup)}>
+                    <FormControl variant="standard" fullWidth className={clsx(classes.formGroup)}>
                       <Autocomplete
                         id="addressLookupInput"
                         options={addressSuggestions}
@@ -1007,7 +996,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         loading={loading}
                         disableClearable={true}
                         value={addressLookup}
-                        getOptionSelected={(option, value) => option === value}
+                        isOptionEqualToValue={(option, value) => option === value}
                         onChange={handleChangeAddress}
                         filterOptions={(options) => options}
                         ListboxProps={{
@@ -1090,7 +1079,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                   {show && (
                     <Grid container>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Address line 1"
@@ -1110,7 +1099,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Address line 2"
@@ -1130,7 +1119,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="City"
@@ -1150,7 +1139,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <label>
                             <Select
                               items={countryOptions}
@@ -1174,7 +1163,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Postcode"
@@ -1204,10 +1193,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                       </Grid>
                       <Grid container>
                         <Grid item xs={12} sm={6}>
-                          <FormControl
-                            fullWidth
-                            className={classes.formGroupLandline}
-                          >
+                          <FormControl variant="standard" fullWidth className={classes.formGroupLandline}>
                             <Input
                               type="text"
                               label="Landline number"
@@ -1239,7 +1225,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                           </FormControl>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                          <FormControl fullWidth className={classes.formGroupm}>
+                          <FormControl variant="standard" fullWidth className={classes.formGroupm}>
                             <Input
                               type="text"
                               label="Mobile number"
@@ -1276,7 +1262,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                           xs={2}
                           className={clsx(classes.checkBoxContainer)}
                         >
-                          <FormControl className={classes.formGroup}>
+                          <FormControl variant="standard" className={classes.formGroup}>
                             <Grid
                               item
                               xs={2}
@@ -1324,10 +1310,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                       </Grid>
                       {sendInviteWhenSaving && (
                         <Grid item xs={12}>
-                          <FormControl
-                            fullWidth
-                            className={clsx(classes.formGroup)}
-                          >
+                          <FormControl variant="standard" fullWidth className={clsx(classes.formGroup)}>
                             <Autocomplete
                               id="billingAddressLookupInput"
                               options={billingAddressSuggestions}
@@ -1337,7 +1320,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                               loading={billingLoading}
                               disableClearable={true}
                               value={billingAddressLookup}
-                              getOptionSelected={(option, value) =>
+                              isOptionEqualToValue={(option, value) =>
                                 option === value
                               }
                               onChange={handleChangeBillingAddress}
@@ -1425,12 +1408,12 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                         <Grid container>
                           <Grid item xs={12}>
                             <FormControl
+                              variant="standard"
                               fullWidth
                               className={clsx(
                                 classes.formGroup,
                                 classes.BillingAlign
-                              )}
-                            >
+                              )}>
                               <Input
                                 type="text"
                                 label="Billing address line 1"
@@ -1453,10 +1436,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="Billing address line 2"
@@ -1479,10 +1459,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="City"
@@ -1502,10 +1479,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <label>
                                 <Select
                                   items={countryOptions}
@@ -1528,10 +1502,7 @@ export default function CompanyDetails(companyDetailProps: CompanyDetailProps) {
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="Postcode"

@@ -6,7 +6,7 @@ import { showToastState } from '../../Toast/Toast';
 import CustomModal from '../CustomModal';
 import { atom, useRecoilState } from 'recoil/dist';
 import { TFunction } from 'react-i18next';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 interface ChangePasswordModalProps {
   t: TFunction;

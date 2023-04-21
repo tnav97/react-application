@@ -1,7 +1,8 @@
 import { Text, Button, Input, StyleVariables } from '@alcumus/components';
 import { useStateFromInput } from '@alcumus/hooks';
-import { Grid, makeStyles, Theme } from '@material-ui/core';
-import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons';
+import { Grid, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
 import React, { ReactNode } from 'react';

@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import MAppBar from '@material-ui/core/AppBar';
-import MToolbar from '@material-ui/core/Toolbar';
+import { Theme } from '@mui/material/styles';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import MAppBar from '@mui/material/AppBar';
+import MToolbar from '@mui/material/Toolbar';
 import clsx from 'clsx';
 import Image from '../Image';
 import StyleVariables from '../../styles/variables';
 import { NavLink } from 'react-router-dom';
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 import { RegularIcon } from '../Icon';
 import { INavigationContext, Navigation } from './Navigation';
 
@@ -46,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     sideMenuButton: {
       display: 'none',
-      [theme.breakpoints.down('xs')]: {
+      [theme.breakpoints.down('sm')]: {
         display: 'flex',
       },
     },
@@ -87,7 +89,7 @@ export default function AppBar({
             className={clsx(classes.sideMenuButton)}
             onClick={navigationContext.toggleDrawer}
             data-testid="sideMenuIcon"
-          >
+            size="large">
             {navigationContext.isDrawerOpen ? (
               <RegularIcon icon="close" />
             ) : (

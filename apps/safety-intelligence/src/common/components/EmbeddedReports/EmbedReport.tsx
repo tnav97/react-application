@@ -13,7 +13,8 @@ import {
   getReportRunMessage,
 } from '../../../server/models/report';
 import { ReportElementTypes } from '../../../domain/reportElementTypes';
-import { CircularProgress, makeStyles, Paper } from '@material-ui/core';
+import { CircularProgress, Paper } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 type Props = {
   embedReportId?: string;

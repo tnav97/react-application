@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
 import { Page, StyleVariables } from '@alcumus/components';
 import Message from '../../components/Message';
 

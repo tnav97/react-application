@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleVariables, Text } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
+import { Paper } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import Link from '../Link';
 import clsx from 'clsx';

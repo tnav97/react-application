@@ -2,7 +2,8 @@ import React from 'react';
 import MyAccountSection from '../MyAccountSection';
 import { TFunction } from 'i18next';
 import { StyleVariables, Text } from '@alcumus/components';
-import { Box, Link, makeStyles } from '@material-ui/core';
+import { Box, Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 
 const useStyles = makeStyles({

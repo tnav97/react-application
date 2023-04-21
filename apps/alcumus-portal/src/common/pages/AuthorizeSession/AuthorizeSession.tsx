@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles, Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Center, LoadingPage, StyleVariables, Text } from '@alcumus/components';
 import { Redirect, useLocation } from 'react-router-dom';
 import qs from 'querystring';

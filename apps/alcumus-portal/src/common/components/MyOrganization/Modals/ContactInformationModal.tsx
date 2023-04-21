@@ -1,8 +1,8 @@
 import React, { ChangeEventHandler, useCallback, useState } from 'react';
 import { Button, Input, Modal, Text } from '@alcumus/components';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { MyOrganizationContact } from '../../../types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import validator from 'validator';
 import isPhoneNumber from '../../../../lib/utils/isPhoneNumber';
 

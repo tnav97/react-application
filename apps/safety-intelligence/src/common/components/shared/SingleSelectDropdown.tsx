@@ -4,10 +4,10 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-} from '@material-ui/core';
+} from '@mui/material';
 import { StyleVariables } from '@alcumus/components';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Check, ExpandMore } from '@material-ui/icons';
+import { createStyles, makeStyles } from '@mui/styles';
+import { Check, ExpandMore } from '@mui/icons-material';
 import clsx from 'clsx';
 
 export interface MenuItems {

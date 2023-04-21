@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 import { SplitWithImage, ImageProps } from '../SplitWithImage/SplitWithImage';
 import CheckedItem, { CheckedItemProps } from './CheckedItem';

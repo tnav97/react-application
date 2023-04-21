@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Box,
   IconButton,
-  makeStyles,
   SwipeableDrawer,
   Theme,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { MemberDetails } from '../../types';
 import { OutlinedIcon, StyleVariables, Text } from '@alcumus/components';
 import {
@@ -14,7 +14,7 @@ import {
   DisplayUserName,
 } from './DisplayMemberInfo';
 import { DisplayApplication } from './DisplayApplication';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import useSWR from 'swr';
 import StatusDisplay from '../StatusDisplay';
 
@@ -74,6 +74,7 @@ export function MemberApplications({
   open,
   onClose,
   member,
+  organizationId,
   onEdit,
   t,
 }: UserApplicationsProps) {

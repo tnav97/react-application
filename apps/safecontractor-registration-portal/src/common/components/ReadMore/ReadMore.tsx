@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { StyleVariables } from '@alcumus/components';
 interface ReadMoreProps {
   children: string;
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '6rem',
       marginRight: '6rem',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '1.5rem',
       marginRight: '1.5rem',
       display: 'none',

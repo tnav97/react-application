@@ -1,4 +1,4 @@
-import AlcumusTheme, { theme as ThemeOptions } from './styles/theme';
+import AlcumusTheme, { theme as DeprecatedThemeOptions } from './styles/theme';
 import StyleVariables, { StyleVariablesSchema } from './styles/variables';
 import Page from './components/Page';
 import Center from './components/Center';
@@ -90,7 +90,7 @@ export {
   StyleVariables,
   StyleVariablesSchema,
   Text,
-  ThemeOptions,
+  DeprecatedThemeOptions,
   TranslateReady,
   Chip,
   NavList,

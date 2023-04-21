@@ -1,4 +1,5 @@
-import { Chip as BaseChip, makeStyles } from '@material-ui/core';
+import { Chip as BaseChip } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import clsx from 'clsx';
 import React from 'react';
 import styleVariables from '../../styles/variables';
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
 export interface ChipProps {
   key?: string;
   label?: string;
-  variant?: 'default' | 'outlined';
+  variant?: 'filled' | 'outlined';
   clickable?: boolean;
   onClick?: Function;
   onDelete?: Function;

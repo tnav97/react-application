@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, StyleVariables, Text } from '@alcumus/components';
-import { Grid, makeStyles, Paper } from '@material-ui/core';
+import { Grid, Paper } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
 

@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Avatar, makeStyles } from '@material-ui/core';
+import { Avatar } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
   AlertSnackbar,
   Modal,
@@ -7,7 +8,7 @@ import {
   Text,
 } from '@alcumus/components';
 import MyAccountSection from '../MyAccountSection';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import clsx from 'clsx';
 import EditUserProfile from './EditUserProfile';
 

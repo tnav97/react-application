@@ -1,15 +1,15 @@
 import React from 'react';
 import {
   Box,
+  Card,
   CardActions,
   CardContent,
   CardMedia,
   IconButton,
   Link,
-  makeStyles,
   Theme,
-} from '@material-ui/core';
-import Card from '@material-ui/core/Card';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Button, StyleVariables, Text } from '@alcumus/components';
 import { ApplicationCategory, MyOrganizationDetails } from '../../types';
 import Analytics from '@alcumus/analytics-package';

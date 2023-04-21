@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Box, Card, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Card, Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Page, StyleVariables, Image } from '@alcumus/components';
 import AboutSection from '../../components/AboutSection';
 import FooterSection from '../../components/FooterSection';
@@ -23,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     marginLeft: '12rem',
     marginRight: '12rem',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '24px',
       marginRight: '24px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
       marginBottom: '16px',
@@ -50,12 +51,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   marginTop: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: 0,
       marginLeft: '20px',
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '8px',
     marginRight: '8px',
 
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
       margin: 'auto',
       marginBottom: '8px',
@@ -87,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
   thumbsUp: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -99,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '14px',
       fontWeight: StyleVariables.fonts.weight.medium,
       fontSize: StyleVariables.fonts.size.h5,
@@ -134,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -162,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: 0,
       marginLeft: '20px',
@@ -178,7 +179,7 @@ export default function ResponseTime() {
   const [selectedValue, setSelectedValue] = React.useState('');
   const dispatch = useDispatch();
   const history = useHistory();
-  const responseTimeSelector = useSelector((state) => state.responseTime);
+  const responseTimeSelector = useSelector((state: any) => state.responseTime);
 
   const contents = [
     {

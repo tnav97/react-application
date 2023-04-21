@@ -1,6 +1,6 @@
 parameters:
   - name: nodeVersion
-    default: '14.x'
+    default: '16.x'
   - name: containerRegistry
     default: screg-portal-dev-uk-registry
   - name: k8sEnvironment

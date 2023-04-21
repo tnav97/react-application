@@ -1,6 +1,6 @@
 parameters:
   - name: nodeVersion
-    default: '14.x'
+    default: '16.x'
   - name: applicationName
   - name: containerRegistry
   - name: k8sEnvironment

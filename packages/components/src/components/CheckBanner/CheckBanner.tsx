@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import styleVariables from '../../styles/variables';
 import Text from '../Text';
 import {

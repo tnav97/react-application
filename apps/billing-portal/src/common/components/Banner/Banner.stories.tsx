@@ -1,5 +1,5 @@
 import { Button, Page } from '@alcumus/components';
-import { Launch } from '@material-ui/icons';
+import { Launch } from '@mui/icons-material';
 import { Story } from '@storybook/react';
 import React from 'react';
 import Banner, { BannerProps } from './Banner';

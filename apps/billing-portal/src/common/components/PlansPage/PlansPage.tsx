@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Grid, makeStyles, Theme } from '@material-ui/core';
+import { Box, Grid, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
   Navbar,
   Page,

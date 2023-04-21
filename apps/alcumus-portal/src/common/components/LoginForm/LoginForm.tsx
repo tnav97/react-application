@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import EmailForm from '../LoginEmailForm';
 import PasswordForm from '../LoginPasswordForm';

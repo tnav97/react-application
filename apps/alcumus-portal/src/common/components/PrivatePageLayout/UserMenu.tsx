@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { IconButton, Menu, MenuItem } from '@material-ui/core';
+import { createStyles, makeStyles } from '@mui/styles';
 import { Image, OutlinedIcon, StyleVariables } from '@alcumus/components';
 import clsx from 'clsx';
 import { UserProfile } from '../../types';
 import OrganizationSelector from './OrganizationSelector';
+import { IconButton, Menu, MenuItem, Theme } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -1,6 +1,6 @@
 import { Input, InputProps, StyleVariables } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
-import { Done } from '@material-ui/icons';
+import { makeStyles } from '@mui/styles';
+import { Done } from '@mui/icons-material';
 import { FieldProps } from 'formik';
 import React from 'react';
 

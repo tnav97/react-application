@@ -3,7 +3,8 @@ import {
   StyleVariables,
   Text,
 } from '@alcumus/components';
-import { makeStyles, Menu, MenuItem } from '@material-ui/core';
+import { Menu, MenuItem } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -11,7 +12,7 @@ import {
   DashboardOutlined,
   ExpandMore,
   FolderOutlined,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import { useSetRecoilState } from 'recoil';
 import { createFolderModalVisibleState } from '../FoldersPage/CreateFolderModal';
 import { createDashboardModalVisibleState } from '../Modals/CreateDashboardModal';

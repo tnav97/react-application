@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@mui/styles';
 import NavBar from '../NavBar';
 import { Skeleton } from '@mui/material';
 import Table from '@mui/material/Table';

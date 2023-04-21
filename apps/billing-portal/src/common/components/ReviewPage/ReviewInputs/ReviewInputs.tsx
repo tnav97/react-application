@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Plan } from '../../../../types/plans';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { TranslateReady, Input, Select } from '@alcumus/components';
 import { clamp } from 'lodash';
 import { BillingFrequency } from '../../../../types/billingFrequency';

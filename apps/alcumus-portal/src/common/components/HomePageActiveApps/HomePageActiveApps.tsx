@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import { StyleVariables, Text } from '@alcumus/components';
 import Product from '../HomePageAllApps/Product';

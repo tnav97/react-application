@@ -6,8 +6,9 @@ import {
   StyleVariables,
   Text,
 } from '@alcumus/components';
-import { TFunction } from 'react-i18next';
-import { Grid, makeStyles } from '@material-ui/core';
+import { TFunction } from 'i18next';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 interface ConfirmSendRequestDemoEmailModalProps {
   onCancel: () => void;

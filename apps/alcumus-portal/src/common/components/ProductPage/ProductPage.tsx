@@ -15,9 +15,9 @@ import {
   OutlinedIcon,
   Modal,
 } from '@alcumus/components';
-import { Box, Toolbar, AppBar, alpha } from '@material-ui/core';
+import { Box, Toolbar, AppBar, alpha } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import { useHistory } from 'react-router-dom';
 import { TFunction } from 'i18next';
 import ContactUsModal from '../ContactUsModal';

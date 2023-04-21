@@ -9,8 +9,9 @@ import {
   CheckBannerItem,
   OutlinedIcon,
 } from '@alcumus/components';
-import { IconButton, makeStyles } from '@material-ui/core';
-import { TFunction } from 'react-i18next';
+import { IconButton } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { TFunction } from 'i18next';
 import { PasswordValidator } from './PasswordValidator';
 
 const useStyles = makeStyles(() => ({

@@ -1,7 +1,6 @@
 import React, { ReactChild, ReactFragment, ReactPortal } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
-import { createTheme, Theme } from '@material-ui/core';
+import ThemeProvider from '@mui/styles/ThemeProvider';
+import { createTheme, CssBaseline, Theme } from '@mui/material';
 import { AlcumusTheme } from '@alcumus/components';
 
 interface IframeThemeProviderProps {

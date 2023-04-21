@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Grid, makeStyles, Theme } from '@material-ui/core';
+import { Grid, Theme } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Text from '../Text';
 import Image from '../Image';
 import styleVariables from '../../styles/variables';
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontWeight: 600,
     color: styleVariables.colors.grey5,
     margin: '2.25rem 0 1.5rem 0',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '3rem',
     },
   },

@@ -1,4 +1,5 @@
-import { makeStyles, Grid, Theme } from '@material-ui/core';
+import { Grid, Theme } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import React from 'react';
 import Image from '../Image';
 import Button from '../Button';
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   logo: {
     width: '9.375rem',
     height: '6vh',
-    [theme.breakpoints.down('xs')]: { width: '5.375rem', height: '5vh' },
+    [theme.breakpoints.down('sm')]: { width: '5.375rem', height: '5vh' },
   },
 }));
 

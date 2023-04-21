@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles';
 import { LoginPageProps } from '../LoginCredentials/LoginPage';
 import { Redirect } from 'react-router-dom';
 import React from 'react';
@@ -7,7 +6,8 @@ import {
   LoginFlowParameters,
 } from '../../hooks/LoginLogoutFlow';
 import { Navbar, Page, StyleVariables } from '@alcumus/components';
-import Grid from '@material-ui/core/Grid/Grid';
+import Grid from '@mui/material/Grid/Grid';
+import { makeStyles } from '@mui/styles';
 import { LoginDiscoveryForm } from '../../components/LoginDiscoveryForm';
 import { getLoginCredentialsPageUrl } from '../../../lib/utils/getLoginPageUrl';
 interface StyleProps {

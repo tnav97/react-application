@@ -1,6 +1,7 @@
 import React from 'react';
-import { Done } from '@material-ui/icons';
-import { makeStyles, Box } from '@material-ui/core';
+import { Done } from '@mui/icons-material';
+import { Box } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 
 const useStyles = makeStyles({

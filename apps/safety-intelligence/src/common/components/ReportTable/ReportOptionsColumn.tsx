@@ -1,10 +1,10 @@
 import React, { FunctionComponent, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { IconButton, Menu, MenuItem } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { IconButton, Menu, MenuItem } from '@mui/material';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DriveFileMoveOutlinedIcon from '@mui/icons-material/DriveFileMoveOutlined';
-import MoreVert from '@material-ui/icons/MoreVert';
+import MoreVert from '@mui/icons-material/MoreVert';
 import { StyleVariables, TranslateReady } from '@alcumus/components';
 import clsx from 'clsx';
 import { useRecoilState } from 'recoil';

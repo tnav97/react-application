@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Card,
-  CircularProgress,
-  FormControl,
-  Grid,
-  makeStyles,
-  Typography,
-} from '@material-ui/core';
+import { Box, Card, CircularProgress, FormControl, Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import {
   Page,
   StyleVariables,
@@ -17,7 +10,7 @@ import {
 } from '@alcumus/components';
 import MotoAboutSection from '../../components/MotoAboutSection';
 import MotoFooterSection from '../../components/MotoFooterSection';
-import DoneIcon from '@material-ui/icons/Done';
+import DoneIcon from '@mui/icons-material/Done';
 import clsx from 'clsx';
 import MotoStepper from '../../components/MotoStepper';
 import MotoMobileFooterSection from '../../components/MobileFooterSection';
@@ -47,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h3,
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     marginTop: '24px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '16px',
       marginLeft: '1rem',
       marginRight: '1rem',
@@ -57,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     textAlign: 'center',
     marginTop: '32px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '14px',
       fontWeight: StyleVariables.fonts.weight.medium,
       fontSize: StyleVariables.fonts.size.h5,
@@ -75,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.xs,
     textAlign: 'center',
     marginTop: '12px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
       paddingLeft: '4px',
@@ -101,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     height: '208px',
     marginLeft: '8px',
     marginRight: '8px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
       margin: 'auto',
       marginTop: '0.8rem',
@@ -115,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '8px',
     marginLeft: '1rem',
     marginRight: '1rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: '1rem',
     },
   },
@@ -133,13 +126,13 @@ const useStyles = makeStyles((theme) => ({
   },
   thumbsUp: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   thumbsDown: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -168,7 +161,7 @@ const useStyles = makeStyles((theme) => ({
   },
   marginTop: {
     marginTop: '16px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'block',
       marginTop: '-3px',
       marginLeft: '20px',
@@ -180,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 80px)',
     },
   },
@@ -190,7 +183,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -218,7 +211,7 @@ export default function MotoReferralCodePage(referralProps: ReferralProps) {
   const [selected, setSelected] = React.useState(CardSelected.Not_Selected);
   const [referralcode, setReferralcode] = useState('');
   const [referralMessage, setreferralMessage] = useState('');
-  const referralValue = useSelector((state) => state.motoReferral);
+  const referralValue = useSelector((state: any) => state.motoReferral);
   const dispatch = useDispatch();
   const [show, setShow] = useState(true);
   const [appear, setAppear] = useState(true);
@@ -455,7 +448,7 @@ export default function MotoReferralCodePage(referralProps: ReferralProps) {
           <Grid container>
             <Grid item sm={2} md={4} lg={4}></Grid>
             <Grid item xs={12} sm={8} md={4} lg={4} xl={4}>
-              <FormControl fullWidth className={clsx(classes.formGroup)}>
+              <FormControl variant="standard" fullWidth className={clsx(classes.formGroup)}>
                 <Input
                   className={classes.referralInput}
                   state={referralError ? 'error' : 'default'}

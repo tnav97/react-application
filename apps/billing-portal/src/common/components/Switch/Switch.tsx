@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Switch as SwitchComponent,
   SwitchProps as SwitchComponentProps,
-  makeStyles,
   Box,
   Theme,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import clsx from 'clsx';
 const useStyles = makeStyles((theme: Theme) => ({

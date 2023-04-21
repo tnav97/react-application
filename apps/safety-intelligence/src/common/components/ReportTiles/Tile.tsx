@@ -1,13 +1,13 @@
 import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 import {
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
   Grid,
-} from '@material-ui/core';
+} from '@mui/material';
 import FavoriteContentButton from '../shared/FavoriteContentButton';
 import { ReportElementTypes } from '../../../domain/reportElementTypes';
 import { getContentThumbnail } from '../../../server/models/content';

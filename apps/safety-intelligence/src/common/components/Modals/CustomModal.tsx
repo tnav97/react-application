@@ -2,14 +2,14 @@ import React, { FunctionComponent } from 'react';
 import {
   CircularProgress,
   Grid,
-  makeStyles,
   Modal,
   Paper,
-} from '@material-ui/core';
+  Fade,
+  Backdrop,
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
-import CloseIcon from '@material-ui/icons/Close';
-import Fade from '@material-ui/core/Fade';
-import Backdrop from '@material-ui/core/Backdrop';
+import CloseIcon from '@mui/icons-material/Close';
 import { CancelButton } from '../Button/CancelButton';
 import { PrimaryButton } from '../Button/PrimaryButton';
 import { CriticalButton } from '../Button/CriticalButton';

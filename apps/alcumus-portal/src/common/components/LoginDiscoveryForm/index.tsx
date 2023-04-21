@@ -6,7 +6,8 @@ import { Button, Center, StyleVariables, Text } from '@alcumus/components';
 import { getLoginUrlWithQueryString } from '../../../lib/utils/getLoginPageUrl';
 import DomainForm from './DomainForm';
 import { useTranslation } from 'react-i18next';
-import { Divider, Grid, Link, makeStyles } from '@material-ui/core';
+import { Divider, Grid, Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { DESIGNATE_NULL, LoginFlowHooks } from '../../hooks/LoginLogoutFlow';
 
 function mapStateToProps({ auth }: RootReducerState) {

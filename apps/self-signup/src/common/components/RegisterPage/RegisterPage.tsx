@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import RegisterForm from '../RegisterForm';
 import { Page, Navbar, StyleVariables } from '@alcumus/components';
 interface StyleProps {

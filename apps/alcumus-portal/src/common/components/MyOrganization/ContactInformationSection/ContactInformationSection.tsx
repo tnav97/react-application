@@ -1,6 +1,7 @@
-import { Grid, makeStyles, withStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles, withStyles } from '@mui/styles';
 import React, { useCallback, useContext, useState } from 'react';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { Button, Modal, StyleVariables, Text } from '@alcumus/components';
 import { MyOrganizationContact } from '../../../types';
 import TextSection from '../TextSection';

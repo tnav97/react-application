@@ -7,7 +7,7 @@ import React, {
 import qs from 'querystring';
 import store from 'store';
 import { Page as AcPage, StyleVariables } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({

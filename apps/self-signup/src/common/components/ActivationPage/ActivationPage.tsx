@@ -1,5 +1,6 @@
 import { Image, Page, StyleVariables } from '@alcumus/components';
-import { makeStyles, Grid, LinearProgress } from '@material-ui/core';
+import { Grid, LinearProgress } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import axios from 'axios';
 import { TFunction } from 'i18next';
 import React, { useEffect } from 'react';

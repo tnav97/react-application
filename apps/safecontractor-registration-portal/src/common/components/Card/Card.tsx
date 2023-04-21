@@ -1,8 +1,9 @@
-import { FormControl, Grid, makeStyles, Typography } from '@material-ui/core';
+import { FormControl, Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Image, StyleVariables, Input } from '@alcumus/components';
 import FooterSection from '../../components/FooterSection';
 import clsx from 'clsx';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 import React, { useEffect, useState } from 'react';
 import { TypeData } from '../../../server/models/questionnarie';
 import MobileFooterSection from '../MobileFooterSection';
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     textAlign: 'left',
     marginTop: '26px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       paddingLeft: '0',
       paddingRight: '0',
     },
@@ -87,7 +88,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     marginBottom: '8px',
     height: '114px',
-    [theme.breakpoints.down('xs')]: {
+    marginTop: '16px',
+    [theme.breakpoints.down('sm')]: {
       height: '56px',
     },
     [theme.breakpoints.up('sm')]: {
@@ -124,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -159,8 +161,8 @@ export default function Card(cardProps: CardProps) {
   const dispatch = useDispatch();
   const history = useHistory();
   const [show, setShow] = useState(false);
-  const employeeCardValue = useSelector((state) => state.employee);
-  const companyTypeValue = useSelector((state) => state.companyType);
+  const employeeCardValue = useSelector((state: any) => state.employee);
+  const companyTypeValue = useSelector((state: any) => state.companyType);
   const [selected, setSelected] = React.useState<number>(
     companyTypeSelected.NOT_SELECTED
   );
@@ -329,9 +331,9 @@ export default function Card(cardProps: CardProps) {
         <Grid container className={classes.cardContainerCenter}>
           <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
             <FormControl
+              variant="standard"
               fullWidth
-              className={(classes.formGroup, classes.othersText)}
-            >
+              className={(classes.formGroup, classes.othersText)}>
               <Input
                 type="text"
                 id="companyTypeId"

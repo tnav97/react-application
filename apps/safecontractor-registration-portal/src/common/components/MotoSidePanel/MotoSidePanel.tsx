@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import ExpandLessOutlinedIcon from '@material-ui/icons/ExpandLessOutlined';
-import DoneIcon from '@material-ui/icons/Done';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import DoneIcon from '@mui/icons-material/Done';
+import Typography from '@mui/material/Typography';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import clsx from 'clsx';
-import CardContent from '@material-ui/core/CardContent';
+import CardContent from '@mui/material/CardContent';
 import { CompanyDetails, BasketRequest, Subsidiaries } from '../../types';
-import { Grid, makeStyles, CircularProgress } from '@material-ui/core';
+import { Grid, CircularProgress } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { DefaultBrand } from '../../constants';
 import { StyleVariables, Input, Button } from '@alcumus/components';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1px',
     marginRight: '1px',
     marginBottom: '1rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '3px',
     },
     [theme.breakpoints.up('xl')]: {
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.smaller,
     marginLeft: '1px',
     marginRight: '1px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
     [theme.breakpoints.up('xl')]: {
@@ -98,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     background: StyleVariables.colors.surface.neutral.selected,
     marginTop: '1rem',
     border: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
@@ -135,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '0rem',
       marginTop: '5px',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: 0,
     },
   },
@@ -143,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1rem',
 
     borderRadius: '6.25rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '1rem',
       marginTop: '0',
     },
@@ -193,14 +194,14 @@ export default function MotoSidePanel(SidePanelProps: SidePanelProps) {
   const [discountErrorMessage, setDiscountErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const referralValue = useSelector((state) => state.motoReferral);
-  const employeeCardValue = useSelector((state) => state.motoEmployee);
-  const companyTypeValue = useSelector((state) => state.motoCompanyType);
-  const choosePlansSelector = useSelector((state) => state.motoChoosePlans);
+  const referralValue = useSelector((state: any) => state.motoReferral);
+  const employeeCardValue = useSelector((state: any) => state.motoEmployee);
+  const companyTypeValue = useSelector((state: any) => state.motoCompanyType);
+  const choosePlansSelector = useSelector((state: any) => state.motoChoosePlans);
   const companyDetailsSelector = useSelector(
-    (state) => state.motoCompanyDetails
+    (state: any) => state.motoCompanyDetails
   );
-  const subsidiaryListSelector = useSelector((state) => state.motoSubsidiary);
+  const subsidiaryListSelector = useSelector((state: any) => state.motoSubsidiary);
   let subscriptionValue = 0;
   const classes = useStyles();
 

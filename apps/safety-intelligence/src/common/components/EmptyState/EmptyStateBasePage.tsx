@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { Image, StyleVariables, Text } from '@alcumus/components';
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 interface Props {
   body?: string;
   imgSrc?: string;

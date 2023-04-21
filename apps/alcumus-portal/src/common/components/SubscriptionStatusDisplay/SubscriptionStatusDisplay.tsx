@@ -5,8 +5,9 @@ import {
   StyleVariables,
   OutlinedIconType,
 } from '@alcumus/components';
-import { Box, makeStyles } from '@material-ui/core';
-import { TFunction } from 'react-i18next';
+import { Box } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { TFunction } from 'i18next';
 
 const useStyles = makeStyles({
   container: {

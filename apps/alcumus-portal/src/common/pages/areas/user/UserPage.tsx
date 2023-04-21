@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
+import Container from '@mui/material/Container';
 import PrivatePage from '../../../components/PrivatePageLayout';
 import { DrawerItem, OutlinedIcon, StyleVariables } from '@alcumus/components';
 import Analytics from '@alcumus/analytics-package';

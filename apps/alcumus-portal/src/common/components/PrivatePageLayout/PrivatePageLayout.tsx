@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useEffect } from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import MToolbar from '@material-ui/core/Toolbar';
+import { createStyles, makeStyles } from '@mui/styles';
+import { ListItem, ListItemIcon, Theme } from '@mui/material';
+import MToolbar from '@mui/material/Toolbar'
 import { Redirect, useHistory, useLocation } from 'react-router-dom';
 import qs from 'querystring';
 import { useInterval } from '@alcumus/hooks';
@@ -21,7 +22,6 @@ import PageContext from '../../context/PageContext';
 import { UserProfile } from '../../types';
 import getLoginPageUrl from '../../../lib/utils/getLoginPageUrl';
 import clsx from 'clsx';
-import { ListItem, ListItemIcon } from '@material-ui/core';
 import { ToastContextProvider } from '../../context/ToastContext';
 import { getTokenRefreshIntervalInMilliseconds } from './refreshInterval';
 import Analytics from '@alcumus/analytics-package';

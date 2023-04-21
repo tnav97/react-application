@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { Image, Page, StyleVariables, Button } from '@alcumus/components';
 import RightOrderComponent from '../../components/RightOrderComponentSection';
 import AboutSection from '../../components/AboutSection';
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '24px',
     maxWidth: '175px',
     maxHeight: '32px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -30,13 +31,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h3,
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       fontSize: StyleVariables.fonts.size.h3,
       lineHeight: StyleVariables.fonts.lineHeight.h3,
       marginTop: '24px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       fontWeight: StyleVariables.fonts.weight.medium,
       marginTop: '24px',
     },
@@ -49,11 +50,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h5,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       marginTop: '34px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '32px',
     },
     marginTop: '32px',
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h5,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       fontSize: StyleVariables.fonts.size.h5,
       lineHeight: StyleVariables.fonts.lineHeight.regular,
@@ -83,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     marginTop: '8px',
     marginBottom: '8px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '12px',
       marginBottom: '12px',
     },
@@ -111,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   paymentContainer: {
     marginTop: '1.5rem',
     marginBottom: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -147,8 +148,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function RegistrationCompletePage() {
   const [membershipId, setMembershipId] = useState('');
+  const paymentDetailsSelector = useSelector((state: any) => state.payment);
   const [redirectionLink, setRedirectionLink] = useState('');
-  const paymentDetailsSelector = useSelector((state) => state.payment);
   useEffect(() => {
     if (paymentDetailsSelector.membershipId !== undefined) {
       setMembershipId(paymentDetailsSelector.membershipId);

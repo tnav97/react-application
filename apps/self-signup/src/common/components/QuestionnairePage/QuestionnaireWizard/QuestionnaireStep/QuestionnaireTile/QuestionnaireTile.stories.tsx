@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionnaireTile, { QuestionnaireTileProps } from './QuestionnaireTile';
 import { Story } from '@storybook/react';
 import { Page } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 export default {
   component: QuestionnaireTile,

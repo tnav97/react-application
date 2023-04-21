@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleVariables } from '../../../index';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 
 export interface NavListItemProps extends React.HTMLAttributes<HTMLDivElement> {

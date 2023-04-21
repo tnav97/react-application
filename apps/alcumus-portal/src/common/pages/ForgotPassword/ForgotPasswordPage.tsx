@@ -1,8 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { makeStyles, Theme } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@mui/styles';
 import { Center, StyleVariables, Text } from '@alcumus/components';
 import validator from 'validator';
 import Page from '../../components/Page';
@@ -11,6 +8,7 @@ import Link from '../../components/Link';
 import SuccessMessage from '../../components/ForgotPasswordSuccessMessage';
 import { KEY_MAP } from '../../constants';
 import getLoginPageUrl from '../../../lib/utils/getLoginPageUrl';
+import { Button, Grid, TextField, Theme } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) => ({
   [theme.breakpoints.up('md')]: {

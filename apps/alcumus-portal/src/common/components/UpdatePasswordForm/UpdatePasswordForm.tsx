@@ -1,10 +1,8 @@
 import React, { useCallback, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
 import { useStateFromInput } from '@alcumus/hooks';
+import { Button, Paper, TextField } from '@mui/material';
 
 const useStyles = makeStyles(() => ({
   setPasswordSection: {

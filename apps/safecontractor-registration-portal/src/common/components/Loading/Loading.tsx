@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleVariables } from '@alcumus/components';
-import { Grid, makeStyles, LinearProgress } from '@material-ui/core';
+import { Grid, LinearProgress } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   gridImage: {
@@ -12,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   LoadingImage: {
     width: '30vw',
     marginLeft: '-25px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '45vw',
     },
   },
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     height: '8px',
     borderRadius: '5px',
     marginTop: '9%',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '30vw',
       backgroundColor: StyleVariables.colors.surface.neutral.default,
       height: '6px',

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Drawer } from './Drawer';
-import DescriptionIcon from '@material-ui/icons/Description';
-import PaymentIcon from '@material-ui/icons/Payment';
-import PeopleIcon from '@material-ui/icons/People';
-import SettingsIcon from '@material-ui/icons/Settings';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import DescriptionIcon from '@mui/icons-material/Description';
+import PaymentIcon from '@mui/icons-material/Payment';
+import PeopleIcon from '@mui/icons-material/People';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Page from '../Page';
-import { DrawerContent } from './DrawerContent';
+import DrawerContent from './DrawerContent';
 import { MemoryRouter } from 'react-router-dom';
 
 export default {

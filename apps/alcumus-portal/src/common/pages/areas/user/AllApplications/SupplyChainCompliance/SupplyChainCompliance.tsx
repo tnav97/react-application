@@ -3,7 +3,7 @@ import React from 'react';
 import ProductPage from '../../../../../components/ProductPage';
 import UserPage from '../../UserPage';
 import { IMAGE_BASE_URL } from '../../../../../constants';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { useTrackPageDuration } from '../../../../../hooks/useTrackPageDuration';
 
 export default function SupplyChainCompliance({ t }: { t: TFunction }) {

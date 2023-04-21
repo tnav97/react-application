@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { Button as BaseButton, makeStyles } from '@material-ui/core';
+import { Button as BaseButton } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import styleVariables from '../../styles/variables';
 import clsx from 'clsx';
 import ButtonLoadingIndicator from './ButtonLoadingIndicator';
@@ -133,7 +134,7 @@ export default function Button({
       disableElevation
       disableRipple
       classes={{
-        label: clsx({ [classes.textUppercase]: uppercase }),
+        // label: clsx({ [classes.textUppercase]: uppercase }),
         sizeSmall: classes.buttonSmall,
         sizeLarge: classes.buttonLarge,
         contained: clsx({

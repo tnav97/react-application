@@ -1,10 +1,10 @@
-import { makeStyles } from '@material-ui/core';
+import makeStyles from '@mui/styles/makeStyles';
 import clsx from 'clsx';
 import React, { ReactNode, useCallback, useEffect } from 'react';
 import { useStateFromInput } from '@alcumus/hooks';
 import styleVariables from '../../styles/variables';
 import { useDebouncedCallback } from 'use-debounce';
-import { Add, Remove } from '@material-ui/icons';
+import { Add, Remove } from '@mui/icons-material';
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

@@ -1,5 +1,6 @@
 import { Button, StyleVariables, Text } from '@alcumus/components';
-import { makeStyles, Theme } from '@material-ui/core';
+import { Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import React from 'react';
 import FeaturesList from '../FeaturesList/FeaturesList';

@@ -1,9 +1,9 @@
 import React from 'react';
 import FormControlLabel, {
   FormControlLabelProps,
-} from '@material-ui/core/FormControlLabel';
-import { makeStyles } from '@material-ui/core/styles';
-import Checkbox from '@material-ui/core/Checkbox';
+} from '@mui/material/FormControlLabel';
+import { makeStyles } from '@mui/styles';
+import Checkbox from '@mui/material/Checkbox';
 import { StyleVariables } from '@alcumus/components';
 
 export interface LabeledCheckBoxProps

@@ -5,8 +5,8 @@ import {
   StepLabel,
   StepperProps as StepperBaseProps,
   StepConnector,
-  makeStyles,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StepIcon } from './StepIcon';
 import { StyleVariables } from '@alcumus/components';
 import { getDataTestId } from './getDataTestId';

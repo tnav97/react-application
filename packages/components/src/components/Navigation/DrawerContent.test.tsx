@@ -3,9 +3,9 @@ import '@testing-library/react/dont-cleanup-after-each';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { DrawerContent } from './DrawerContent';
 import { OutlinedIcon } from '../Icon';
 import { Drawer } from './Drawer';
+import DrawerContent from './DrawerContent';
 
 const drawerItems = [
   {

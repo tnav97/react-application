@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@mui/styles';
 import { Text, StyleVariables } from '@alcumus/components';
 import { useHistory } from 'react-router-dom';
 import { useRecoilState } from 'recoil';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Modal, Text } from '@alcumus/components';
-import { Grid } from '@material-ui/core';
 import { MarketoCallback } from '@alcumus/hooks';
 import { MarketoForm } from './MarketoForm';
+import { Grid } from '@mui/material';
 
 export interface MarketoFormModalProps<T> {
   formId: number;

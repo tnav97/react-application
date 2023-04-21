@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables, Text } from '@alcumus/components';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 
 export interface TextSectionProps {
   textValue?: string;

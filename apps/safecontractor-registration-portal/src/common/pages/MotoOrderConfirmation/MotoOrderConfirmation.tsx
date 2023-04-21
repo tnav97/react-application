@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { Image, Page, StyleVariables, Button } from '@alcumus/components';
 import MotoRightOrderComponent from '../../components/MotoRightOrderComponentSection';
 import MotoAboutSection from '../../components/MotoAboutSection';
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '18px',
     maxWidth: '175px',
     maxHeight: '32px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -26,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h3,
     lineHeight: StyleVariables.fonts.lineHeight.h3,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       marginTop: '24px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       fontWeight: StyleVariables.fonts.weight.medium,
       marginTop: '24px',
     },
@@ -49,13 +50,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h5,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       fontSize: StyleVariables.fonts.size.h5,
       lineHeight: StyleVariables.fonts.lineHeight.h5,
       marginTop: '40px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '32px',
     },
     [theme.breakpoints.up('xl')]: {
@@ -72,13 +73,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h5,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     fontWeight: StyleVariables.fonts.weight.semiBold,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.semiBold,
       fontSize: StyleVariables.fonts.size.h5,
       lineHeight: StyleVariables.fonts.lineHeight.regular,
       marginTop: '16px',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '16px',
     },
     [theme.breakpoints.up('xl')]: {
@@ -97,14 +98,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: StyleVariables.fonts.weight.regular,
     fontSize: StyleVariables.fonts.size.h6,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.regular,
       fontSize: StyleVariables.fonts.size.h6,
       lineHeight: StyleVariables.fonts.lineHeight.h5,
     },
     marginTop: '8px',
     marginBottom: '8px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -122,12 +123,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: StyleVariables.fonts.weight.regular,
     fontSize: StyleVariables.fonts.size.h6,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       fontWeight: StyleVariables.fonts.weight.regular,
       fontSize: StyleVariables.fonts.size.h6,
       lineHeight: StyleVariables.fonts.lineHeight.h5,
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -148,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   assistanceInfo: {
     marginTop: '1rem',
     marginBottom: '1rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -175,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
 export default function OrderConfirmationPage() {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const paymentDetailsSelector = useSelector((state) => state.motoPayment);
+  const paymentDetailsSelector = useSelector((state: any) => state.motoPayment);
   const cartIdExist = paymentDetailsSelector.cartIdExist;
   const history = useHistory();
 

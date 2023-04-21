@@ -1,8 +1,8 @@
 import React from 'react';
-import { atom, useRecoilState } from 'recoil/dist';
-import { createStyles, makeStyles, withStyles } from '@material-ui/core/styles';
-import { Box, Grid } from '@material-ui/core';
-import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
+import { atom, useRecoilState } from 'recoil';
+import { createStyles, makeStyles, withStyles } from '@mui/styles';
+import { Box, Grid } from '@mui/material';
+import { ToggleButton, ToggleButtonGroup } from '@mui/lab';
 import { TFunction } from 'i18next';
 import { withTranslation } from 'react-i18next';
 import { StyleVariables, Text } from '@alcumus/components';

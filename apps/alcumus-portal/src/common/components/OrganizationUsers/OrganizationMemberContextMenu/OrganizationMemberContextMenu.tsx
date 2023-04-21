@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem } from '@material-ui/core';
+import { Menu, MenuItem } from '@mui/material';
 import { MenuItemContent } from '../../MenuItemContent';
 import { MemberDetails } from '../../../types';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import DeleteOrganizationMemberModal from '../DeleteOrganizationMemberModal';
 import DisableOrganizationMemberModal from '../DisableOrganizationMemberModal';
 import CancelInvitationModal from '../CancelInvitationModal';

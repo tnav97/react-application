@@ -1,6 +1,6 @@
-import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/core/styles';
-import { Visibility, VisibilityOff } from '@material-ui/icons';
+import IconButton from '@mui/material/IconButton';
+import { makeStyles } from '@mui/styles';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import React, { useCallback, useState } from 'react';
 import {
   Input,

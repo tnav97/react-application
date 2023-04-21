@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import ExpandLessOutlinedIcon from '@material-ui/icons/ExpandLessOutlined';
-import DoneIcon from '@material-ui/icons/Done';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import DoneIcon from '@mui/icons-material/Done';
+import Typography from '@mui/material/Typography';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import clsx from 'clsx';
-import CardContent from '@material-ui/core/CardContent';
+import CardContent from '@mui/material/CardContent';
 import { CompanyDetails, BasketRequest, Subsidiaries } from '../../types';
-import { Grid, makeStyles, CircularProgress } from '@material-ui/core';
+import { Grid, CircularProgress } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { CardSelected, DefaultBrand } from '../../constants';
 import { StyleVariables, Input, Button } from '@alcumus/components';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1px',
     marginRight: '1px',
     marginBottom: '1rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '3px',
     },
     [theme.breakpoints.up('xl')]: {
@@ -81,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     top: '8px',
     float: 'right',
     left: '130%',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       left: '130%',
     },
     [theme.breakpoints.up('md')]: {
@@ -111,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     background: StyleVariables.colors.surface.neutral.selected,
     marginTop: '1rem',
     border: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
@@ -142,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   inputTextAlign: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '150%',
     },
   },
@@ -153,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '0rem',
       marginTop: '5px',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: 0,
     },
   },
@@ -161,13 +162,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1rem',
     marginLeft: '0px',
     borderRadius: '6.25rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '1rem',
       marginTop: '0',
     },
   },
   applyButtonAlign: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginTop: '8px',
     },
     [theme.breakpoints.up('md')]: {
@@ -225,13 +226,13 @@ export default function SidePanel(SidePanelProps: SidePanelProps) {
   const [discountErrorMessage, setDiscountErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const referralValue = useSelector((state) => state.referral);
-  const employeeCardValue = useSelector((state) => state.employee);
-  const companyTypeValue = useSelector((state) => state.companyType);
-  const choosePlansSelector = useSelector((state) => state.choosePlans);
-  const companyDetailsSelector = useSelector((state) => state.companyDetails);
-  const subsidiaryListSelector = useSelector((state) => state.subsidiary);
-  const basketSelector = useSelector((state) => state.basket);
+  const referralValue = useSelector((state: any) => state.referral);
+  const employeeCardValue = useSelector((state: any) => state.employee);
+  const companyTypeValue = useSelector((state: any) => state.companyType);
+  const choosePlansSelector = useSelector((state: any) => state.choosePlans);
+  const companyDetailsSelector = useSelector((state: any) => state.companyDetails);
+  const subsidiaryListSelector = useSelector((state: any) => state.subsidiary);
+  const basketSelector = useSelector((state: any) => state.basket);
   let subscriptionValue = 0;
   const classes = useStyles();
 

@@ -1,4 +1,5 @@
-import { Grid, makeStyles } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Analytics from '@alcumus/analytics-package';
 import { TFunction } from 'i18next';
 import React, { useCallback } from 'react';

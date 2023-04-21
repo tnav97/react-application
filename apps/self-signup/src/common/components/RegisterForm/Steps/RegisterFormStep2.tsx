@@ -1,4 +1,5 @@
-import { Grid, makeStyles, Link } from '@material-ui/core';
+import { Grid, Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Analytics from '@alcumus/analytics-package';
 import { Field, useFormikContext } from 'formik';
 import { TFunction } from 'i18next';

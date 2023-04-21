@@ -1,13 +1,13 @@
 import React, { ChangeEventHandler, useCallback, useState } from 'react';
 import { Button, Input, Modal, Select, Text } from '@alcumus/components';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import {
   LanguageCode,
   MyOrganizationDetails,
   OrganizationSizeDesignation,
   EditableOrganizationDetails,
 } from '../../../types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 interface OrganizationDetailsModalProps {
   onCancel: () => void;

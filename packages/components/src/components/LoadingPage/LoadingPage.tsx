@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, LinearProgress, makeStyles } from '@material-ui/core';
+import { Grid, LinearProgress } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Image from '../Image';
 import Text from '../Text';
 import StyleVariables from '../../styles/variables';

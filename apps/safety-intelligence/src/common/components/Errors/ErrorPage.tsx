@@ -7,8 +7,8 @@ import {
   TranslateReady,
 } from '@alcumus/components';
 import { useHistory } from 'react-router-dom';
-import NavBar from '../NavBar';
-import { makeStyles } from '@material-ui/core';
+import NavBar from '../NavBar/NavBar';
+import { makeStyles } from '@mui/styles';
 import { TFunction } from 'i18next';
 import { withTranslation } from 'react-i18next';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, act } from '@testing-library/react';
 
 import SortableTableHeader, { TableHeader } from './SortableTableHeader';
-import { Table } from '@material-ui/core';
+import { Table } from '@mui/material';
 
 describe('Sortable Table Header', () => {
   test('it should render proper text as the table headers', () => {

@@ -1,11 +1,12 @@
-import { lighten, makeStyles } from '@material-ui/core/styles';
+import { lighten } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import clsx from 'clsx';
 import React from 'react';
 import { StyleVariables } from '../../index';
-import { SvgIconProps } from '@material-ui/core/SvgIcon/SvgIcon';
-import { CheckCircle, Close, ErrorOutline } from '@material-ui/icons';
+import { SvgIconProps } from '@mui/material/SvgIcon/SvgIcon';
+import { CheckCircle, Close, ErrorOutline } from '@mui/icons-material';
 import Text from '../Text';
-import { IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
 
 const BACKGROUND_OPACITY = 0.9;
 

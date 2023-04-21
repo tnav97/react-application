@@ -1,15 +1,14 @@
 import {
-  makeStyles,
   SortDirection,
   TableCell,
   TableHead,
   TableRow,
-  withStyles,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles, withStyles } from '@mui/styles';
 import React, { FunctionComponent, useCallback } from 'react';
 import { StyleVariables } from '@alcumus/components';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 export interface SortingConfiguration {
   propertyName: string;
   sortType: SortDirection;

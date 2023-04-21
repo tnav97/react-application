@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar, { AppBarProps } from './AppBar';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Text from '../Text';
 import { MemoryRouter } from 'react-router-dom';
 

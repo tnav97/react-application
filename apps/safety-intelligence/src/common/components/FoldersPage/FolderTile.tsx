@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { NavLink } from 'react-router-dom';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Box, Card, CardContent, Grid } from '@material-ui/core';
-import { FolderOutlined } from '@material-ui/icons';
+import { makeStyles, createStyles } from '@mui/styles';
+import { Box, Card, CardContent, Grid } from '@mui/material';
+import { FolderOutlined } from '@mui/icons-material';
 import { Text, StyleVariables } from '@alcumus/components';
 interface Props {
   data: {

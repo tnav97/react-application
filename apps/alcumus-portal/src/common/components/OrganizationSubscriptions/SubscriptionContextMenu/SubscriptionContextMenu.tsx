@@ -1,7 +1,7 @@
 import React from 'react';
-import { Menu, MenuItem } from '@material-ui/core';
+import { Menu, MenuItem } from '@mui/material';
 import { MenuItemContent } from '../../MenuItemContent';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 
 export interface KebabMenuProps {
   anchorElement: Element | null;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleVariables } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import clsx from 'clsx';
 interface StepperSection {
   count?: number;
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '30px',
     display: 'flex',
     justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '24px',
     },
   },

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, StyleVariables } from '@alcumus/components';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
-import { KeyboardBackspaceRounded } from '@material-ui/icons';
+import { Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import { KeyboardBackspaceRounded } from '@mui/icons-material';
 import { FooterBackgroundColor } from '../constants';
 import { Link } from 'react-router-dom';
 

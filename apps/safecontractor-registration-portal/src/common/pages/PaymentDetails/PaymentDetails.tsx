@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { LoadingPage, Page, StyleVariables } from '@alcumus/components';
 import clsx from 'clsx';
 import AboutSection from '../../components/AboutSection';
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '1rem',
   },
   paymentDetailsContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
@@ -78,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paymentContainerAlign: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
     },
@@ -93,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paymentDetailMargin: {
     marginTop: '10px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
     },
@@ -140,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -175,12 +176,12 @@ const useStyles = makeStyles((theme) => ({
     color: StyleVariables.colors.text.default,
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   cardContainer: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -201,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1.5rem',
     marginBottom: '1rem',
     marginLeft: '-6px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
       display: 'block',
@@ -224,7 +225,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paymentContainer: {
     marginTop: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -257,7 +258,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h6,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     marginTop: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '12px',
       marginBottom: '12px',
     },
@@ -277,21 +278,20 @@ export default function PaymentDetailsPage(
   paymentDetailsPageProps: PaymentDetailsPageProps
 ) {
   const [loading, setLoading] = React.useState(false);
-  const createAccountValue = useSelector((state) => state.createAccount);
-  const referralValue = useSelector((state) => state.referral);
+  const createAccountValue = useSelector((state: any) => state.createAccount);
+  const referralValue = useSelector((state: any) => state.referral);
   const [registerRequest, setRegisterRequest] = useState<RegisterRequest>();
   const [errorMessage, setErrorMessage] = React.useState<string[]>([]);
   const dispatch = useDispatch();
-  const employeeCardValue = useSelector((state) => state.employee);
-  const companyTypeValue = useSelector((state) => state.companyType);
-  const ssipValueSelector = useSelector((state) => state.ssip);
-  const choosePlansSelector = useSelector((state) => state.choosePlans);
-  const registerPaymentSelector = useSelector((state) => state.payment);
-  const companyDetailsSelector = useSelector((state) => state.companyDetails);
-  const responseTimeSelector = useSelector((state) => state.responseTime);
-  const needSupportSelector = useSelector((state) => state.needSupport);
-  const subsidiaryListSelector = useSelector((state) => state.subsidiary);
-  const basketSelector = useSelector((state) => state.basket);
+  const employeeCardValue = useSelector((state: any) => state.employee);
+  const companyTypeValue = useSelector((state: any) => state.companyType);
+  const choosePlansSelector = useSelector((state: any) => state.choosePlans);
+  const registerPaymentSelector = useSelector((state: any) => state.payment);
+  const companyDetailsSelector = useSelector((state: any) => state.companyDetails);
+  const responseTimeSelector = useSelector((state: any) => state.responseTime);
+  const needSupportSelector = useSelector((state: any) => state.needSupport);
+  const subsidiaryListSelector = useSelector((state: any) => state.subsidiary);
+  const basketSelector = useSelector((state: any) => state.basket);
   const [isChecked, setIsChecked] = useState(
     registerPaymentSelector.paymentSelected ?? true
   );

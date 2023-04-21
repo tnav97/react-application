@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import PrivateRoute from './components/PrivateRoute';
 import MotoProtectedRoute from './components/MotoProtectedRoute';
@@ -9,7 +9,7 @@ import { NotFound } from './pages/Errors/NotFound';
 
 export default function ProtectedRouter() {
   return (
-    <Switch>
+    <Routes>
       <ProtectedRoute
         exact
         path="/"
@@ -79,8 +79,7 @@ export default function ProtectedRouter() {
       />
       <Route
         path="/orderConfirmation"
-        exact
-        component={loadable(() => import('./pages/OrderConfirmation'))}
+        Component={loadable(() => import('./pages/OrderConfirmation'))}
       />
       <PrivateRoute
         path="/registrationComplete"
@@ -88,13 +87,11 @@ export default function ProtectedRouter() {
       />
       <Route
         path="/status"
-        exact
-        component={loadable(() => import('./pages/Status'))}
+        Component={loadable(() => import('./pages/Status'))}
       />
       <Route
         path="/termsofservice"
-        exact
-        component={loadable(() => import('./pages/TermsAndConditions'))}
+        Component={loadable(() => import('./pages/TermsAndConditions'))}
       />
       <MotoProtectedRoute
         exact
@@ -160,8 +157,7 @@ export default function ProtectedRouter() {
       />
       <Route
         path="/moto/orderConfirmation"
-        exact
-        component={loadable(() => import('./pages/MotoOrderConfirmation'))}
+        Component={loadable(() => import('./pages/MotoOrderConfirmation'))}
       />
       <MotoPrivateRoute
         path="/moto/registrationComplete"
@@ -170,6 +166,6 @@ export default function ProtectedRouter() {
       <Route>
         <NotFound />
       </Route>
-    </Switch>
+    </Routes>
   );
 }

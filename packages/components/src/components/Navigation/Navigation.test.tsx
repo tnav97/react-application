@@ -1,14 +1,14 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import DescriptionIcon from '@material-ui/icons/Description';
-import PaymentIcon from '@material-ui/icons/Payment';
-import PeopleIcon from '@material-ui/icons/People';
-import SettingsIcon from '@material-ui/icons/Settings';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import DescriptionIcon from '@mui/icons-material/Description';
+import PaymentIcon from '@mui/icons-material/Payment';
+import PeopleIcon from '@mui/icons-material/People';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { BrowserRouter } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import Text from '../Text';
-import { DrawerContent } from './DrawerContent';
+import DrawerContent from './DrawerContent';
 
 const DrawerItems = [
   {

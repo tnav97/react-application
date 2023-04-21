@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { StyleVariables, Button, Page } from '@alcumus/components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: StyleVariables.fonts.lineHeight.h2,
     marginTop: '116px',
     textTransform: 'capitalize',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '16px',
       textAlign: 'center',
       fontSize: StyleVariables.fonts.size.h3,
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h4,
     lineHeight: StyleVariables.fonts.lineHeight.h4,
     marginTop: '24px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '8px',
       textAlign: 'center',
       fontWeight: StyleVariables.fonts.weight.regular,
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   questionButton: {
     marginTop: '32px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paddingRight: {
     paddingRight: '2rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingRight: 0,
     },
   },
@@ -81,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MotoQuestionnaire() {
   const classes = useStyles();
-  const createAccountValue = useSelector((state) => state.motoCreateAccount);
+  const createAccountValue = useSelector((state: any) => state.motoCreateAccount);
   const FooterProps = {
     register: () => undefined,
     footerSectionProps: {

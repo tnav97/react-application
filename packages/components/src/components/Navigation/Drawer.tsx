@@ -1,11 +1,12 @@
 import React, { createContext } from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import MDrawer from '@material-ui/core/Drawer';
-import MToolbar from '@material-ui/core/Toolbar';
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import MDrawer from '@mui/material/Drawer';
+import MToolbar from '@mui/material/Toolbar';
 import StyleVariables from '../../styles/variables';
 import clsx from 'clsx';
-import IconButton from '@material-ui/core/IconButton';
-import Divider from '@material-ui/core/Divider';
+import IconButton from '@mui/material/IconButton';
+import Divider from '@mui/material/Divider';
 import { OutlinedIcon } from '../Icon';
 
 interface DrawerStyleProps {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       props.drawerOpen
         ? DrawerWidth.desktop.opened
         : DrawerWidth.desktop.closed,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: (props: DrawerStyleProps) =>
         props.drawerOpen
           ? DrawerWidth.mobile.opened
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       props.drawerOpen
         ? DrawerWidth.desktop.opened
         : DrawerWidth.desktop.closed,
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: (props: DrawerStyleProps) =>
         props.drawerOpen
           ? DrawerWidth.mobile.opened
@@ -81,7 +82,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   drawerMenu: {
     display: 'flex',
     flexDirection: 'column',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },

@@ -1,7 +1,8 @@
 import React from 'react';
-import MuiModal from '@material-ui/core/Modal';
+import MuiModal from '@mui/material/Modal';
 import clsx from 'clsx';
-import { IconButton, makeStyles, Theme } from '@material-ui/core';
+import { IconButton, Theme } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import Text from '../Text';
 import styleVariables from '../../styles/variables';
 import { RegularIcon } from '../Icon';

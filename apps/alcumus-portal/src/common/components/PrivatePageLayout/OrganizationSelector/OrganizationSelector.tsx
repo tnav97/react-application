@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Input, RegularIcon, StyleVariables, Text } from '@alcumus/components';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import { Organization, UserProfile } from '../../../types';
-import { Autocomplete } from '@material-ui/lab';
+import { Autocomplete } from '@mui/lab';
 import {
   CircularProgress,
   Divider,
   IconButton,
   ListItem,
-} from '@material-ui/core';
+} from '@mui/material';
 import { setCurrentOrganization } from './setCurrentOrganization';
 import { searchOrganizations } from './searchOrganizations';
 import { ROOT_TENANT_ID } from '../../../../lib/utils';

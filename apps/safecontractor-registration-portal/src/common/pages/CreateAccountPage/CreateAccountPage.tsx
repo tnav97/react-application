@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import AboutSection from '../../components/AboutSection';
-import FormControl from '@material-ui/core/FormControl';
+import FormControl from '@mui/material/FormControl';
 import { useHistory } from 'react-router-dom';
-import { Visibility, VisibilityOff } from '@material-ui/icons';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { StyleVariables, Button, Input, Text, Page } from '@alcumus/components';
 import clsx from 'clsx';
 import validator from 'validator';
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('sm')]: {
       display: 'none',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     alignContent: 'center',
 
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
@@ -108,10 +109,10 @@ const useStyles = makeStyles((theme) => ({
     height: '2.5rem',
     justifyContent: 'center',
     borderRadius: '100px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginTop: '3rem',
     },
   },
@@ -138,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: StyleVariables.fonts.weight.semiBold,
   },
   formAccountContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       width: '100%',
     },
   },
@@ -151,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
   accountContainer: {
     justifyContent: 'center',
     display: 'flex',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'inline',
     },
   },
@@ -171,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
   checkboxContainer: {
     display: 'contents',
     width: '100%',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '-2.5rem',
     },
   },
@@ -182,7 +183,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 80px)',
     },
   },
@@ -192,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paddingRight: {
     paddingRight: '2rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: '6rem',
     },
   },
@@ -206,7 +207,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: StyleVariables.colors.surface.neutral.disabled,
     marginTop: '1rem',
     width: '50rem',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '-18.5rem',
       marginTop: '11rem',
       position: 'relative',
@@ -214,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
   },
   centerAlignment: {
     justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: 0,
     },
   },
@@ -240,7 +241,7 @@ export default function CreateAccountPage() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const createAccountValue = useSelector((state) => state.createAccount);
+  const createAccountValue = useSelector((state: any) => state.createAccount);
   const [password, setPassword] = useState('');
   const [passwordMessage, setpasswordMessage] = useState('');
   const [emailMessage, setemailMessage] = useState('');
@@ -386,13 +387,13 @@ export default function CreateAccountPage() {
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
                       <FormControl
+                        variant="standard"
                         fullWidth
                         className={clsx(
                           classes.formGroup,
                           classes.firstName,
                           classes.formAccountContainer
-                        )}
-                      >
+                        )}>
                         <Input
                           type="text"
                           label="First name"
@@ -405,13 +406,13 @@ export default function CreateAccountPage() {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <FormControl
+                        variant="standard"
                         fullWidth
                         className={clsx(
                           classes.formGroup,
                           classes.lastName,
                           classes.formAccountContainer
-                        )}
-                      >
+                        )}>
                         <Input
                           type="text"
                           label="Last name"
@@ -425,13 +426,13 @@ export default function CreateAccountPage() {
                   </Grid>
                   <Grid item sm={12}>
                     <FormControl
+                      variant="standard"
                       fullWidth
                       className={clsx(
                         classes.formGroup,
                         classes.email,
                         classes.formAccountContainer
-                      )}
-                    >
+                      )}>
                       <Input
                         className={classes.formInput}
                         state={emailError ? 'error' : 'default'}
@@ -453,13 +454,13 @@ export default function CreateAccountPage() {
                   </Grid>
                   <Grid item sm={12}>
                     <FormControl
+                      variant="standard"
                       fullWidth
                       className={clsx(
                         classes.formGroup,
                         classes.password,
                         classes.formAccountContainer
-                      )}
-                    >
+                      )}>
                       <div>
                         <Input
                           className={classes.formInput}
@@ -507,11 +508,11 @@ export default function CreateAccountPage() {
                     )}
                   >
                     <FormControl
+                      variant="standard"
                       className={clsx(
                         classes.accountContainer,
                         classes.checkboxContainer
-                      )}
-                    >
+                      )}>
                       <Grid item xs={1} className={clsx(classes.blueCheckbox)}>
                         <label className={classes.checklabel}>
                           <input

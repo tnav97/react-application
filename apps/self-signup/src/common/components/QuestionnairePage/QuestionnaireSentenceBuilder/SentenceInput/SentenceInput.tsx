@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from '@material-ui/core';
+import { Fade } from '@mui/material';
 import { Trans } from 'react-i18next';
 import { Dropdown } from '../../../Dropdown';
 import { TFunction } from 'i18next';

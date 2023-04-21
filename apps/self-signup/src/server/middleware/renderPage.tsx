@@ -35,7 +35,7 @@ export default function renderPage(
     }
 
     const html = ReactDOMServer.renderToString(
-      <StaticRouter location={req.url} context={context}>
+      <StaticRouter location={req.url}>
         <ReduxStateDecorator initialState={preloadedState}>
           <Router />
         </ReduxStateDecorator>

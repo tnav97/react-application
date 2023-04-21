@@ -1,10 +1,10 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Navigation } from './Navigation';
 import Text from '../Text';
 import { MemoryRouter } from 'react-router-dom';
-import { DrawerContent } from './DrawerContent';
+import DrawerContent from './DrawerContent';
 import { OutlinedIcon } from '../Icon';
 
 export default {

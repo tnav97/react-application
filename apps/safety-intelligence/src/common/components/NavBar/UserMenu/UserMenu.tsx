@@ -1,10 +1,10 @@
 import React from 'react';
 import Analytics from '@alcumus/analytics-package';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
-import IconButton from '@material-ui/core/IconButton';
+import { createStyles, makeStyles } from '@mui/styles';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import IconButton from '@mui/material/IconButton';
 import { StyleVariables, Text } from '@alcumus/components';
 import { Skeleton } from '@mui/material';
 import { TFunction } from 'react-i18next';

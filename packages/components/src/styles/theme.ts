@@ -1,12 +1,12 @@
-import { ThemeOptions } from '@material-ui/core';
-import { createTheme } from '@material-ui/core/styles';
+import { DeprecatedThemeOptions } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 import variables from './variables';
 
 /**
  * Alcumus theme specifications to implement overrides in your Material UI frontend project
  */
 const Breakpoints = createTheme().breakpoints;
-export const theme: ThemeOptions = {
+export const theme: DeprecatedThemeOptions = {
   breakpoints: {
     values: {
       xs: 0,
@@ -17,7 +17,7 @@ export const theme: ThemeOptions = {
     },
   },
   palette: {
-    type: 'light',
+    mode: 'light',
     primary: {
       main: variables.colors.action.primary.default,
       contrastText: variables.colors.text.secondary,
@@ -163,10 +163,6 @@ export const theme: ThemeOptions = {
           backgroundColor: variables.colors.surface.neutral.disabled,
         },
       },
-      selectMenu: {
-        fontSize: variables.fonts.size.regular,
-        fontFamily: variables.fonts.family.heading,
-      },
     },
     MuiInputLabel: {
       root: {
@@ -209,8 +205,8 @@ export const theme: ThemeOptions = {
 /**
  * Material UI theme with overrides for Alcumus Style Guide implementation
  */
-const AlcumusTheme = createTheme(theme);
+const AlcumusTheme = createTheme((theme));
 
 export default AlcumusTheme;
 
-export { theme as ThemeOptions };
+export { theme as DeprecatedThemeOptions };

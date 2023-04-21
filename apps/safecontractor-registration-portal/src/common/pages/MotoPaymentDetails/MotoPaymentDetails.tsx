@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, makeStyles, Checkbox } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Checkbox } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from '@mui/material/Typography';
 import { LoadingPage, Page, StyleVariables } from '@alcumus/components';
 import MotoAboutSection from '../../components/MotoAboutSection';
 import MotoSidePanel from '../../components/MotoSidePanel';
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '1rem',
   },
   paymentDetailsContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '16px',
       marginRight: '16px',
     },
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paymentContainerAlign: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
     },
@@ -85,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paymentDetailMargin: {
     marginTop: '10px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
     },
@@ -116,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -151,12 +152,12 @@ const useStyles = makeStyles((theme) => ({
     color: StyleVariables.colors.text.default,
   },
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   cardContainer: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
@@ -173,7 +174,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1.5rem',
     marginBottom: '1rem',
     marginLeft: '-6px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexWrap: 'inherit',
     },
@@ -198,7 +199,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paymentContainer: {
     marginTop: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '0.875rem',
       marginBottom: '0.875rem',
     },
@@ -228,7 +229,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: StyleVariables.fonts.size.h6,
     lineHeight: StyleVariables.fonts.lineHeight.regular,
     marginTop: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginTop: '12px',
       marginBottom: '12px',
     },
@@ -249,24 +250,24 @@ export default function MotoPaymentDetailsPage(
   const [selected, setSelected] = useState(paymentOptions.CARD);
   const [isChecked, setIsChecked] = useState(true);
   const [loading, setLoading] = React.useState(false);
-  const createAccountValue = useSelector((state) => state.motoCreateAccount);
-  const referralValue = useSelector((state) => state.motoReferral);
+  const createAccountValue = useSelector((state: any) => state.motoCreateAccount);
+  const referralValue = useSelector((state: any) => state.motoReferral);
   const [registerRequest, setRegisterRequest] = useState<RegisterRequest>();
   const [errorMessage, setErrorMessage] = React.useState<string[]>([]);
   const [sendInviteWhenSaving, setSendInviteWhenSaving] = useState(false);
   const [sendInviteWhenSaving1, setSendInviteWhenSaving1] = useState(false);
   const dispatch = useDispatch();
-  const employeeCardValue = useSelector((state) => state.motoEmployee);
-  const companyTypeValue = useSelector((state) => state.motoCompanyType);
-  const choosePlansSelector = useSelector((state) => state.motoChoosePlans);
-  const registerPaymentSelector = useSelector((state) => state.motoPayment);
+  const employeeCardValue = useSelector((state: any) => state.motoEmployee);
+  const companyTypeValue = useSelector((state: any) => state.motoCompanyType);
+  const choosePlansSelector = useSelector((state: any) => state.motoChoosePlans);
+  const registerPaymentSelector = useSelector((state: any) => state.motoPayment);
   const companyDetailsSelector = useSelector(
-    (state) => state.motoCompanyDetails
+    (state: any) => state.motoCompanyDetails
   );
-  const responseTimeSelector = useSelector((state) => state.motoResponseTime);
-  const needSupportSelector = useSelector((state) => state.motoNeedSupport);
-  const subsidiaryListSelector = useSelector((state) => state.motoSubsidiary);
-  const basketSelector = useSelector((state) => state.motoBasket);
+  const responseTimeSelector = useSelector((state: any) => state.motoResponseTime);
+  const needSupportSelector = useSelector((state: any) => state.motoNeedSupport);
+  const subsidiaryListSelector = useSelector((state: any) => state.motoSubsidiary);
+  const basketSelector = useSelector((state: any) => state.motoBasket);
   const [basketSelected, setBasketSelected] = useState(undefined);
 
   const FooterProps = {

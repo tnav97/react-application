@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { Button, Input, Modal, Select } from '@alcumus/components';
-import { TFunction } from 'react-i18next';
+import { TFunction } from 'i18next';
 import { CountryCode, MyOrganizationAddress } from '../../../types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import { useStateFromInput } from '@alcumus/hooks';
 interface OrganizationLocationModalProps {
   onCancel?: () => void;

@@ -3,7 +3,7 @@ import { Story } from '@storybook/react';
 import React from 'react';
 import ProductPage from '.';
 import { ProductPageProps } from './ProductPage';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 export default {
   title: 'Components/ProductPage',

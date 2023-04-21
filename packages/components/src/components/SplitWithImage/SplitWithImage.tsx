@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
-import { Grid, GridSize, GridSpacing, Hidden } from '@material-ui/core';
+import { Grid, GridSize, GridSpacing, Hidden } from '@mui/material';
 import { StyleVariables } from '../..';
 
 export interface ImageProps {
@@ -75,7 +75,7 @@ function Split({
   ) => {
     if (mdDownHide)
       return (
-        <Hidden mdDown={true}>
+        <Hidden lgDown={true}>
           <Grid item sm={rightGridSize}>
             {rightChild}
           </Grid>

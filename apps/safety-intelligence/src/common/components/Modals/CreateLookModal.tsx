@@ -18,7 +18,7 @@ import { StyleVariables, Text } from '@alcumus/components';
 import SingleSelectDropdown from '../shared/SingleSelectDropdown';
 import { LookmlModelNavExploreDto } from '../../../dtos/lookmlModelNavExploreDto';
 import { getAllExplores } from '../../../server/models/explore';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import EmbedReportRoute from '../../../routes/EmbedRoute';
 
 interface Props {

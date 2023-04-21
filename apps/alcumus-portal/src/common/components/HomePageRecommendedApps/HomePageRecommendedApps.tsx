@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { IconButton, makeStyles, Theme } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import { Grid, IconButton, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { useTranslation } from 'react-i18next';
 import { StyleVariables, Text, RegularIcon } from '@alcumus/components';
 import FeaturedApp from './FeaturedApp';

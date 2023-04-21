@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles, StepIconProps } from '@material-ui/core';
+import { StepIconProps } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { StyleVariables } from '@alcumus/components';
 import clsx from 'clsx';
 

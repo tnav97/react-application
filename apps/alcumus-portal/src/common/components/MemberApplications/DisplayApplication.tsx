@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import { Text } from '@alcumus/components';
+import { Box } from '@mui/material';
 
 const useStyles = makeStyles({
   alcumusLogo: {

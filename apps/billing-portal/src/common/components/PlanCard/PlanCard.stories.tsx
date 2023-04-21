@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import PlanCard, { PlanCardProps } from './PlanCard';
 import { Page } from '@alcumus/components';
 

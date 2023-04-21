@@ -9,6 +9,12 @@ export interface InitializeI18NextParams {
   projectPath: string;
 }
 
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    returnNull: false;
+  }
+}
+
 /**
  * Detect language from the request
  */
@@ -59,6 +65,7 @@ export function initializeI18Next({
     debug,
     fallbackLng: fallbackLanguage,
     returnEmptyString: true,
+    returnNull: false,
     supportedLngs: ['en', ...supportedLanguages],
     ns: detectNamespaces(projectPath),
     interpolation: {

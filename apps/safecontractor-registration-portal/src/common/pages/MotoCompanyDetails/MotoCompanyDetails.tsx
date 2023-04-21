@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import MotoAboutSection from '../../components/MotoAboutSection';
-import {
-  Grid,
-  makeStyles,
-  Checkbox,
-  CircularProgress,
-  Divider,
-  IconButton,
-  ListItem,
-} from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Checkbox, CircularProgress, Divider, IconButton, ListItem } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import FormControl from '@mui/material/FormControl';
+import Typography from '@mui/material/Typography';
 import MotoExpandableCard from '../../components/MotoExpandableCard';
-import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import { getRegionNameFromCode } from '../../../lib/utils/localeUtils';
 import MotoFooterSection from '../../components/MotoFooterSection';
 import {
@@ -39,7 +32,7 @@ import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { postcodeValidator } from 'postcode-validator';
 import { Address, CompanyDetails } from '../../types';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Autocomplete from '@mui/material/Autocomplete';
 import Stepper from '../../components/Stepper';
 
 interface FormErrors {
@@ -108,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '8em',
     paddingTop: '8px',
     paddingBottom: '8px',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingLeft: 0,
       paddingRight: 0,
       height: '40px',
@@ -148,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: 'calc(100vh - 120px)',
     },
   },
@@ -166,11 +159,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   boxContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '7.25rem',
       marginRight: '7.25rem',
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '1rem',
       marginRight: '1rem',
     },
@@ -179,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none',
     },
   },
@@ -190,7 +183,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   footerVisibility: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -221,9 +214,9 @@ export default function MotoCompanyDetails(
   const [addressSuggestions, setAddressSuggestions] = useState<string[]>([]);
   const dispatch = useDispatch();
   const companyDetailsSelector = useSelector(
-    (state) => state.motoCompanyDetails
+    (state: any) => state.motoCompanyDetails
   );
-  const referralValueSelector = useSelector((state) => state.motoReferral);
+  const referralValueSelector = useSelector((state: any) => state.motoReferral);
   const [billingAddressSuggestions, setBillingAddressSuggestions] = useState<
     string[]
   >([]);
@@ -239,7 +232,7 @@ export default function MotoCompanyDetails(
   const [showCharityDetails, setShowCharityDetails] = useState(false);
   const [canSubmitForm, setCanSubmitForm] = useState(false);
   const [sendInviteWhenSaving, setSendInviteWhenSaving] = useState(false);
-  const companyTypeValue = useSelector((state) => state.motoCompanyType);
+  const companyTypeValue = useSelector((state: any) => state.motoCompanyType);
   const [registrationError, setRegistrationError] = useState(false);
   const [registrationMessage, setRegistrationMessage] = useState('');
   const [landlineError, setLandlineError] = useState(false);
@@ -673,7 +666,7 @@ export default function MotoCompanyDetails(
                     showRegistrationNumberDetails || showRegistrationDetails
                   ) || showRegistrationNumberDetails ? (
                     <Grid item xs={12}>
-                      <FormControl fullWidth className={classes.formGroup}>
+                      <FormControl variant="standard" fullWidth className={classes.formGroup}>
                         <Input
                           type="text"
                           label="Company name"
@@ -693,7 +686,7 @@ export default function MotoCompanyDetails(
                   ) : (
                     <Grid container>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Company name"
@@ -711,7 +704,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Company registration year"
@@ -740,7 +733,7 @@ export default function MotoCompanyDetails(
                   {showRegistrationNumberDetails && (
                     <Grid container spacing={2}>
                       <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Company registration number"
@@ -767,7 +760,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Company registration year"
@@ -800,7 +793,7 @@ export default function MotoCompanyDetails(
                       className={classes.charityContainer}
                     >
                       <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Charity Number"
@@ -827,7 +820,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="number"
                             label="Charity incorporation/reg year"
@@ -854,7 +847,7 @@ export default function MotoCompanyDetails(
                     </Grid>
                   )}
                   <Grid item xs={12}>
-                    <FormControl fullWidth className={classes.formGroup}>
+                    <FormControl variant="standard" fullWidth className={classes.formGroup}>
                       <Input
                         type="text"
                         label="Website"
@@ -875,12 +868,12 @@ export default function MotoCompanyDetails(
                   </Grid>
                   <Grid item xs={12}>
                     <FormControl
+                      variant="standard"
                       fullWidth
                       className={clsx(
                         classes.formGroup,
                         classes.hiddenContainer
-                      )}
-                    >
+                      )}>
                       <Autocomplete
                         id="addressLookupInput"
                         options={addressSuggestions}
@@ -890,7 +883,7 @@ export default function MotoCompanyDetails(
                         loading={loading}
                         disableClearable={true}
                         value={addressLookup}
-                        getOptionSelected={(option, value) => option === value}
+                        isOptionEqualToValue={(option, value) => option === value}
                         onChange={handleChangeAddress}
                         filterOptions={(options) => options}
                         ListboxProps={{
@@ -969,7 +962,7 @@ export default function MotoCompanyDetails(
                   {show && (
                     <Grid container>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Address line 1"
@@ -989,7 +982,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Address line 2"
@@ -1009,7 +1002,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="City"
@@ -1029,7 +1022,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Select
                             items={countryOptions}
                             label="Country"
@@ -1054,7 +1047,7 @@ export default function MotoCompanyDetails(
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <FormControl fullWidth className={classes.formGroup}>
+                        <FormControl variant="standard" fullWidth className={classes.formGroup}>
                           <Input
                             type="text"
                             label="Postcode"
@@ -1084,7 +1077,7 @@ export default function MotoCompanyDetails(
                       </Grid>
                       <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
-                          <FormControl fullWidth className={classes.formGroup}>
+                          <FormControl variant="standard" fullWidth className={classes.formGroup}>
                             <Input
                               type="text"
                               label="Landline number"
@@ -1116,7 +1109,7 @@ export default function MotoCompanyDetails(
                           </FormControl>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                          <FormControl fullWidth className={classes.formGroup}>
+                          <FormControl variant="standard" fullWidth className={classes.formGroup}>
                             <Input
                               type="text"
                               label="Mobile number"
@@ -1153,7 +1146,7 @@ export default function MotoCompanyDetails(
                           xs={1}
                           className={clsx(classes.checkBoxContainer)}
                         >
-                          <FormControl fullWidth className={classes.formGroup}>
+                          <FormControl variant="standard" fullWidth className={classes.formGroup}>
                             <Checkbox
                               inputProps={{
                                 'aria-label':
@@ -1184,12 +1177,12 @@ export default function MotoCompanyDetails(
                         <Grid container>
                           <Grid item xs={12}>
                             <FormControl
+                              variant="standard"
                               fullWidth
                               className={clsx(
                                 classes.formGroup,
                                 classes.hiddenContainer
-                              )}
-                            >
+                              )}>
                               <Autocomplete
                                 id="billingAddressLookupInput"
                                 options={billingAddressSuggestions}
@@ -1199,7 +1192,7 @@ export default function MotoCompanyDetails(
                                 loading={billingLoading}
                                 disableClearable={true}
                                 value={billingAddressLookup}
-                                getOptionSelected={(option, value) =>
+                                isOptionEqualToValue={(option, value) =>
                                   option === value
                                 }
                                 onChange={handleChangeBillingAddress}
@@ -1282,12 +1275,12 @@ export default function MotoCompanyDetails(
                           </Grid>
                           <Grid item xs={12}>
                             <FormControl
+                              variant="standard"
                               fullWidth
                               className={clsx(
                                 classes.formGroup,
                                 classes.BillingAlign
-                              )}
-                            >
+                              )}>
                               <Input
                                 type="text"
                                 label="Billing address line 1"
@@ -1310,10 +1303,7 @@ export default function MotoCompanyDetails(
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="Billing address line 2"
@@ -1336,10 +1326,7 @@ export default function MotoCompanyDetails(
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="City"
@@ -1359,10 +1346,7 @@ export default function MotoCompanyDetails(
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Select
                                 items={countryOptions}
                                 label="County"
@@ -1383,10 +1367,7 @@ export default function MotoCompanyDetails(
                             </FormControl>
                           </Grid>
                           <Grid item xs={12}>
-                            <FormControl
-                              fullWidth
-                              className={classes.formGroup}
-                            >
+                            <FormControl variant="standard" fullWidth className={classes.formGroup}>
                               <Input
                                 type="text"
                                 label="Postcode"

@@ -1,8 +1,8 @@
 import React from 'react';
 import Chip, { ChipProps } from './Chip';
 import { Story } from '@storybook/react';
-import DeleteIcon from '@material-ui/icons/Delete';
-import FaceIcon from '@material-ui/icons/Face';
+import DeleteIcon from '@mui/icons-material/Delete';
+import FaceIcon from '@mui/icons-material/Face';
 
 export default {
   component: Chip,
@@ -13,7 +13,7 @@ const Template: Story<ChipProps> = (args) => <Chip {...args}>Chip</Chip>;
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'default',
+  variant: 'filled',
   label: 'Chip',
   deleteIcon: <DeleteIcon />,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { Grid, Theme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Redirect } from 'react-router-dom';
 import Page from '../../components/Page';
 import LoginForm from '../../components/LoginForm';

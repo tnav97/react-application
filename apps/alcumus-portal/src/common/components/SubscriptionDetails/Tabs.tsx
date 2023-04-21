@@ -1,5 +1,6 @@
 import { StyleVariables } from '@alcumus/components';
-import { makeStyles, Tab, Tabs as MuiTabs } from '@material-ui/core';
+import { Tab, Tabs as MuiTabs } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
 import { TabPanel } from './TabPanel';
 
